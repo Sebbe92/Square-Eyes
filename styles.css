@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/*GLOBAL FONTS*/
+a {
+  font-family: "Zen Dots", cursive;
+  font-size: 1.76em;
+  text-decoration: none;
+  color: black;
+}
+
+/*HEADER*/
+header {
+  padding: 10px;
+  background-color: #f4f9fc;
+  display: flex;
+  align-items: center;
+}
+nav {
+  display: flex;
+}
+.logo img {
+  max-width: 206px;
+}
+
+.big-nav a {
+  margin: 10px;
+}
+.small-nav a {
+  font-size: 1.38em;
+  margin: 10px;
+}
