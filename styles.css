@@ -9,13 +9,37 @@ a {
   text-decoration: none;
   color: black;
 }
+p {
+  font-family: alternate-gothic-no-1-d, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.15em;
+}
+h1,
+h2,
+h3 {
+  font-family: komu-a, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.23em;
+}
+h4 {
+  font-size: 1em;
+  font-weight: 100;
+}
 
 /*HEADER*/
 header {
-  padding: 10px;
+  width: 100%;
+  max-height: 124px;
   background-color: #f4f9fc;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid black;
+  z-index: 2;
 }
 nav {
   display: flex;
@@ -23,11 +47,77 @@ nav {
 .logo img {
   max-width: 206px;
 }
-
+.hamburger {
+  display: none;
+}
+.big-nav {
+  margin-left: -145px;
+}
+.big-nav a:hover {
+  color: gray;
+  font-size: 2em;
+}
 .big-nav a {
   margin: 10px;
 }
+
+.small-nav {
+  text-align: right;
+}
+
 .small-nav a {
   font-size: 1.38em;
   margin: 10px;
+}
+.profile {
+  display: none;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  background-image: url(img/dog_on_couch.jpg);
+  border: 3px solid #48bbff;
+}
+.profile-img img {
+  display: none;
+}
+/*MAIN*/
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.featured,
+.news {
+  background-color: #f4f9fc;
+  max-width: 800px;
+}
+.featured h2,
+.news h2 {
+  text-align: center;
+  font-size: 153px;
+  background-color: #cde9f9;
+  border-radius: 30px;
+  max-width: 800px;
+}
+.featured img,
+.news img {
+  max-width: 400px;
+}
+.featured__movie {
+  display: flex;
+  max-width: 800px;
+  margin-top: 50px;
+}
+.h2_mask {
+  max-height: 110px;
+  width: 800px;
+  background-color: white;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 126px;
+  z-index: 1;
 }
