@@ -34,15 +34,23 @@ header {
   max-height: 124px;
   background-color: #f4f9fc;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   position: sticky;
   top: 0;
   border-bottom: 2px solid black;
   z-index: 2;
+  align-items: center;
 }
 nav {
+  width: 70%;
+}
+header ul {
   display: flex;
+  list-style-type: none;
+  background-color: gray;
+  justify-content: space-between;
+}
+.logo {
 }
 .logo img {
   max-width: 206px;
@@ -50,27 +58,18 @@ nav {
 .hamburger {
   display: none;
 }
-.big-nav {
-  margin-left: -145px;
+.hamburger_label {
+  display: none;
 }
-.big-nav a:hover {
+
+header a:hover {
   color: gray;
   font-size: 2em;
 }
-.big-nav a {
-  margin: 10px;
-}
 
-.small-nav {
-  text-align: right;
-}
-
-.small-nav a {
-  font-size: 1.38em;
-  margin: 10px;
-}
-.profile {
-  display: none;
+.profile_label {
+  display: block;
+  float: right;
 }
 
 .profile-img {
@@ -81,13 +80,12 @@ nav {
   background-image: url(img/dog_on_couch.jpg);
   border: 3px solid #48bbff;
 }
-.profile-img img {
-  display: none;
-}
+
 /*MAIN*/
 main {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .featured,
@@ -120,4 +118,17 @@ main {
   position: -webkit-sticky;
   top: 126px;
   z-index: 1;
+}
+/*HACKS*/
+.checkbox_hack {
+  display: none;
+}
+/*MEDIA QUERY*/
+@media screen and (max-width: 1200px) {
+  nav {
+    display: none;
+  }
+  .hamburger_label {
+    display: flex;
+  }
 }
