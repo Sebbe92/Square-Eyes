@@ -36,6 +36,7 @@ header {
   display: flex;
   justify-content: space-between;
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
   border-bottom: 2px solid black;
   z-index: 2;
@@ -47,13 +48,12 @@ nav {
 header ul {
   display: flex;
   list-style-type: none;
-  background-color: gray;
   justify-content: space-between;
 }
-.logo {
-}
+
 .logo img {
   max-width: 206px;
+  height: inherit;
 }
 .hamburger {
   display: none;
@@ -87,48 +87,80 @@ main {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-
 .featured,
 .news {
-  background-color: #f4f9fc;
   max-width: 800px;
 }
 .featured h2,
 .news h2 {
-  text-align: center;
-  font-size: 153px;
-  background-color: #cde9f9;
   border-radius: 30px;
-  max-width: 800px;
+  width: 100%;
+  font-size: 10em;
+  text-align: center;
+  background-color: #cde9f9;
+  position: sticky;
+}
+
+.featured__movie {
+  display: flex;
+  margin-top: 70px;
+  border-bottom: 1px solid black;
+}
+.vid {
+  max-width: 50%;
 }
 .featured img,
 .news img {
-  max-width: 400px;
+  max-width: 100%;
+  background-color: #cde9f9;
 }
-.featured__movie {
-  display: flex;
-  max-width: 800px;
-  margin-top: 50px;
+.featured p {
+  padding: 5px 10px;
 }
-.h2_mask {
-  max-height: 110px;
-  width: 800px;
-  background-color: white;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 126px;
-  z-index: 1;
+.featured h3,
+.featured h4 {
+  padding-bottom: 10px;
+  padding-left: 5px;
 }
+
 /*HACKS*/
 .checkbox_hack {
   display: none;
 }
-/*MEDIA QUERY*/
+/*MEDIA QUERIES*/
 @media screen and (max-width: 1200px) {
   nav {
     display: none;
   }
+  header {
+    position: relative;
+  }
   .hamburger_label {
     display: flex;
+  }
+  .featured,
+  .news {
+    flex-wrap: wrap;
+  }
+  .featured h2,
+  .news h2 {
+    font-size: 5em;
+  }
+  .featured__movie {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .featured__movie img,
+  .news img {
+    min-width: 100%;
+  }
+  .featured__movie {
+    min-width: 50%;
+  }
+  .vid {
+    max-width: none;
+  }
+  .featured p {
+    font-size: 1.5em;
   }
 }
