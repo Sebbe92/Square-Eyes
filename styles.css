@@ -62,7 +62,7 @@ header ul {
   width: 100%;
   height: inherit;
   float: left;
-  margin-left: 5%;
+  margin-left: 3%;
   align-items: center;
 }
 .left li {
@@ -88,7 +88,7 @@ header ul {
   align-items: center;
 }
 .logo {
-  margin: 30px;
+  margin: 3%;
 }
 .logo img {
   max-width: 206px;
@@ -123,6 +123,7 @@ header nav a:hover {
 html {
   background-image: url(img/pexels-pixabay-414781.jpg);
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -147,7 +148,7 @@ main {
 .sticky_item {
   position: sticky;
   top: 124px;
-  background-color: white;
+  background-color: transparent;
   border-radius: 0 0 30px 30px;
 }
 .featured__movie {
@@ -159,13 +160,15 @@ main {
   max-width: 50%;
 }
 .featured img,
+.featured video,
 .news img {
   max-width: 100%;
   background-color: #cde9f9;
 }
 .news p,
 .featured p {
-  padding: 5px 10px;
+  padding-left: 10px;
+  margin-bottom: 25px;
 }
 .news h3,
 .news h4,
