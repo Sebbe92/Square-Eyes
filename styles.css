@@ -42,6 +42,9 @@ header {
   border-bottom: 2px solid black;
   z-index: 2;
 }
+.hamburger_label {
+  padding: 5%;
+}
 nav {
   width: 100%;
   height: 124px;
@@ -177,18 +180,24 @@ main {
 }
 /*MEDIA QUERIES*/
 @media screen and (max-width: 1200px) {
-  nav {
-    display: none;
-  }
+  /*HEADER*/
   header {
     position: relative;
   }
+  nav {
+    display: none;
+  }
+  .logo {
+    align-self: center;
+  }
+
   .profile_img {
     display: none;
   }
   .hamburger_label {
-    display: flex;
+    display: block;
   }
+  /*MAIN*/
   .featured,
   .news {
     flex-wrap: wrap;
