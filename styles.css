@@ -43,7 +43,7 @@ header {
   z-index: 2;
 }
 .hamburger_label {
-  padding: 5%;
+  margin: 5%;
 }
 nav {
   width: 100%;
@@ -188,7 +188,6 @@ main {
     display: none;
   }
   .logo {
-    align-self: center;
   }
 
   .profile_img {
