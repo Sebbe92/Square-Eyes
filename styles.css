@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-/*GLOBAL FONTS*/
+/*GLOBAL*/
 a {
   font-family: "Zen Dots", cursive;
   font-size: 1.76em;
@@ -35,25 +35,61 @@ header {
   background-color: #f4f9fc;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   border-bottom: 2px solid black;
   z-index: 2;
-  align-items: center;
 }
 nav {
-  width: 70%;
+  width: 100%;
+  height: 124px;
+  align-items: center;
+  white-space: nowrap;
 }
 header ul {
   display: flex;
   list-style-type: none;
-  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+}
+.left {
+  width: 100%;
+  height: inherit;
+  float: left;
+  margin-left: 5%;
+  align-items: center;
+  background-color: bisque;
+}
+.left li {
+  margin: 10px;
+}
+.left a {
+  background-color: #cde9f9;
+}
+.right {
+  width: 100%;
+  height: 50px;
+  float: right;
+  align-items: center;
+}
+.right ul {
+  display: block;
+  float: right;
+  width: 100%;
+}
+
+.right a {
+  float: right;
+  font-size: 1.38em;
+  margin: 10px;
+  background-color: #cde9f9;
+  align-items: center;
 }
 
 .logo img {
   max-width: 206px;
-  height: inherit;
 }
 .hamburger {
   display: none;
@@ -62,7 +98,7 @@ header ul {
   display: none;
 }
 
-header a:hover {
+header nav a:hover {
   color: gray;
   font-size: 2em;
 }
@@ -82,6 +118,12 @@ header a:hover {
 }
 
 /*MAIN*/
+html {
+  background-image: url(img/pexels-pixabay-414781.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 main {
   display: flex;
   justify-content: space-around;
@@ -90,6 +132,7 @@ main {
 .featured,
 .news {
   max-width: 800px;
+  background-color: #f4f9fc;
 }
 .featured h2,
 .news h2 {
@@ -98,9 +141,11 @@ main {
   font-size: 10em;
   text-align: center;
   background-color: #cde9f9;
-  position: sticky;
 }
-
+.sticky_item {
+  position: sticky;
+  top: 124px;
+}
 .featured__movie {
   display: flex;
   margin-top: 70px;
