@@ -60,14 +60,11 @@ header ul {
   float: left;
   margin-left: 5%;
   align-items: center;
-  background-color: bisque;
 }
 .left li {
   margin: 10px;
 }
-.left a {
-  background-color: #cde9f9;
-}
+
 .right {
   width: 100%;
   height: 50px;
@@ -84,10 +81,11 @@ header ul {
   float: right;
   font-size: 1.38em;
   margin: 10px;
-  background-color: #cde9f9;
   align-items: center;
 }
-
+.logo {
+  margin: 30px;
+}
 .logo img {
   max-width: 206px;
 }
@@ -145,6 +143,8 @@ main {
 .sticky_item {
   position: sticky;
   top: 124px;
+  background-color: white;
+  border-radius: 0 0 30px 30px;
 }
 .featured__movie {
   display: flex;
@@ -159,9 +159,12 @@ main {
   max-width: 100%;
   background-color: #cde9f9;
 }
+.news p,
 .featured p {
   padding: 5px 10px;
 }
+.news h3,
+.news h4,
 .featured h3,
 .featured h4 {
   padding-bottom: 10px;
@@ -210,5 +213,8 @@ main {
   }
   .featured p {
     font-size: 1.5em;
+  }
+  .sticky_item {
+    top: 0;
   }
 }
