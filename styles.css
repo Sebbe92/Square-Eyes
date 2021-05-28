@@ -44,6 +44,7 @@ header {
 }
 .hamburger_label {
   margin: 5%;
+  align-self: center;
 }
 nav {
   width: 100%;
