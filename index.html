@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="scripts.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="stylesheet" href="https://use.typekit.net/gtn5ffb.css" />
     <link rel="stylesheet" href="https://use.typekit.net/gtn5ffb.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -39,7 +41,7 @@
         <ul>
           <li class="left">
             <ul>
-              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html" class="current">Home</a></li>
               <li><a href="#">Browse</a></li>
               <li><a href="#">Upload</a></li>
             </ul>
@@ -64,16 +66,19 @@
       <section class="featured">
         <div class="sticky_container">
           <div class="sticky_item">
-            <h2>featured</h2></div>
-            <div class="featured__movie">
+            <h2 class="text_center">featured</h2></div>
+            <div class="featured__vid">
               <div class="vid">
                 <video src="videos/square_eyes_test_vid.mp4" title="Feel The Magic"
                 type="video/mp4"
-                controls></video>
-                <h3>the movie with the Solider</h3>
-                <h4>neon film studio</h4>
+                controls
+                id="myvideo">Browser not supported</video>
+                <h3>the movie with the solider</h3>
+                <div class="under_title"><h4>neon film studio</h4>
+                  <h5 class="vid_tag">horror</h5></div>
+                
               </div>
-              <div>
+              <div class="textfield">
                 <p>
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Repudiandae totam iure alias qui et? Fugiat necessitatibus
@@ -84,54 +89,63 @@
             </div>
           </div>
         </div>
-        <div class="featured__movie">
+        <div class="featured__vid">
           <div class="vid">
             <video src="videos/square_eyes_test_vid.mp4" title="Feel The Magic"
-                type="video/mp4"
-                controls></video>
-            <h3>the movie with the Solider</h3>
-            <h4>neon film studio</h4>
+            type="video/mp4"
+            controls
+            id="myvideo">Browser not supported</video>
+            <h3>the movie with the solider</h3>
+            <div class="under_title"><h4>neon film studio</h4>
+              <h5 class="vid_tag">horror</h5></div>
+            
           </div>
-          <div>
+          <div class="textfield">
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae totam iure alias qui et? Fugiat necessitatibus vel,
-              distinctio perferendis velit ducimus sit. Voluptate voluptas,
-              harum suscipit magni quos voluptatum rem.
+              Repudiandae totam iure alias qui et? Fugiat necessitatibus
+              vel, distinctio perferendis velit ducimus sit. Voluptate
+              voluptas, harum suscipit magni quos voluptatum rem.
             </p>
           </div>
         </div>
-        <div class="featured__movie">
+        <div class="featured__vid">
           <div class="vid">
             <video src="videos/square_eyes_test_vid.mp4" title="Feel The Magic"
-                type="video/mp4"
-                controls></video>
-            <h3>the movie with the Solider</h3>
-            <h4>neon film studio</h4>
+            type="video/mp4"
+            controls
+            id="myvideo">Browser not supported</video>
+            <h3>the movie with the solider</h3>
+            <div class="under_title"><h4>neon film studio</h4>
+              <h5 class="vid_tag">horror</h5></div>
+            
           </div>
-          <div>
+          <div class="textfield">
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae totam iure alias qui et? Fugiat necessitatibus vel,
-              distinctio perferendis velit ducimus sit. Voluptate voluptas,
-              harum suscipit magni quos voluptatum rem.
+              Repudiandae totam iure alias qui et? Fugiat necessitatibus
+              vel, distinctio perferendis velit ducimus sit. Voluptate
+              voluptas, harum suscipit magni quos voluptatum rem.
             </p>
           </div>
         </div>
-        <div class="featured__movie">
+        <div class="featured__vid">
           <div class="vid">
             <video src="videos/square_eyes_test_vid.mp4" title="Feel The Magic"
-                type="video/mp4"
-                controls></video>
-            <h3>the movie with the Solider</h3>
-            <h4>neon film studio</h4>
+            type="video/mp4"
+            controls
+            id="myvideo">Browser not supported</video>
+            <h3>the movie with the solider</h3>
+            <div class="under_title"><h4>neon film studio</h4>
+              <h5 class="vid_tag">horror</h5></div>
+            
           </div>
-          <div>
+          <div class="textfield">
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae totam iure alias qui et? Fugiat necessitatibus vel,
-              distinctio perferendis velit ducimus sit. Voluptate voluptas,
-              harum suscipit magni quos voluptatum rem.
+              Repudiandae totam iure alias qui et? Fugiat necessitatibus
+              vel, distinctio perferendis velit ducimus sit. Voluptate
+              voluptas, harum suscipit magni quos voluptatum rem.
             </p>
           </div>
         </div>
@@ -139,17 +153,14 @@
       <section class="news">
         <div class="sticky_container">
           <div class="sticky_item">
-            <h2>news</h2></div>
-            <div class="featured__movie">
-              <div class="vid">
+            <h2 class="text_center">news</h2></div>
+            <div class="news_article">
+              <h3 class="text_center">Square Eyes goes viral!</h3>
+              <div class="flex_container">
                 <img
-                  src="img/pexels-jakson-martins-2230885.jpg"
+                  src="img/SquareEyes_Logo.png"
                   alt="Solider walking with his rifle"
                 />
-                <h3>the movie with the Solider</h3>
-                <h4>neon film studio</h4>
-              </div>
-              <div>
                 <p>
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Repudiandae totam iure alias qui et? Fugiat necessitatibus
@@ -167,7 +178,8 @@
               alt="Solider walking with his rifle"
             />
             <h3>the movie with the Solider</h3>
-            <h4>neon film studio</h4>
+            <div class="under_title"><h4>neon film studio</h4>
+              <h5 class="vid_tag">horror</h5></div>
           </div>
           <div>
             <p>
@@ -178,14 +190,15 @@
             </p>
           </div>
         </div>
-        <div class="featured__movie">
-          <div class="vid">
+        <div class="news_item">
+          <div class="news">
             <img
               src="img/pexels-jakson-martins-2230885.jpg"
               alt="Solider walking with his rifle"
             />
             <h3>the movie with the Solider</h3>
-            <h4>neon film studio</h4>
+            <div class="under_title"><h4>neon film studio</h4>
+              <h5 class="vid_tag">horror</h5></div>
           </div>
           <div>
             <p>
