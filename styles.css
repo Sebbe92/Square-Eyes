@@ -172,7 +172,8 @@ main h2 {
 .featured video,
 .news img {
   max-width: 100%;
-  background-color: #cde9f9;
+  background-color: transparent;
+  margin: 20px 0;
 }
 main .sticky_item {
   width: 100%;
@@ -206,6 +207,10 @@ main .sticky_item {
   border: 1px solid black;
 }
 /*main_news*/
+.news_block h3 {
+  font-size: 5em;
+  color: rgb(17, 17, 17);
+}
 .photo_and_text {
   display: flex;
   margin-top: 70px;
