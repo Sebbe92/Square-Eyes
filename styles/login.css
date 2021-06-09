@@ -50,7 +50,6 @@ input {
   text-decoration: none;
   color: black;
   white-space: nowrap;
-  text-align: center;
 }
 .login:checked ~ .login_widget {
   display: block;

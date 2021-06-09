@@ -64,6 +64,7 @@ label {
 .center {
   width: 100%;
   margin: auto;
+  text-align: center;
 }
 .text_center {
   width: 100%;
@@ -168,4 +169,49 @@ header ul {
 /*HACKS*/
 .checkbox_hack {
   display: none;
+}
+@media screen and (max-width: 1100px) {
+  /*HEADER*/
+  header {
+    position: relative;
+  }
+  .logo {
+    margin: auto;
+  }
+  nav,
+  .profile_img {
+    display: none;
+  }
+  .login_signup {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hamburger_label {
+    display: block;
+  }
+  /*MAIN*/
+  .featured,
+  .news {
+    flex-wrap: wrap;
+  }
+  .featured__movie {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .featured__movie img,
+  .news img {
+    min-width: 100%;
+  }
+  .featured__movie {
+    min-width: 50%;
+  }
+  .featured p {
+    font-size: 1.5em;
+  }
+  .featured .sticky_item,
+  .news .sticky_item {
+    top: 0;
+  }
 }
