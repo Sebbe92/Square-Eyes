@@ -3,7 +3,7 @@ main {
   flex-wrap: wrap;
 }
 .viewer {
-  background-image: url(img/pexels-rakicevic-nenad-1274260.jpg);
+  background-image: url(/img/pexels-rakicevic-nenad-1274260.jpg);
   background-size: cover;
   max-width: 98%;
   min-width: 50%;
@@ -11,7 +11,7 @@ main {
 }
 .maker {
   position: sticky;
-  background-image: url(img/pexels-koolshooters-7346304.jpg);
+  background-image: url(/img/pexels-koolshooters-7346304.jpg);
   background-size: cover;
   max-width: 98%;
   min-width: 50%;

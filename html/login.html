@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="first_visit.css">
+    <link rel="stylesheet" href="first_visit.css" />
     <script src="scripts.js"></script>
     <link rel="shortcut icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="https://use.typekit.net/gtn5ffb.css" />
@@ -12,10 +12,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="login.css">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Square Eyes</title>
+    <title>login</title>
   </head>
   <body>
     <header>
@@ -87,17 +88,30 @@
         </section>
       </nav>
       <section class="login_signup">
-      <a href="#">login</a>
+        <label for="login" class="login_label">login</label>
+      <input type="checkbox" name="login" id="login" class="login">
       <a href="sign_up.html">sign-up</a>
+      <section class="login_widget">
+        <form action="#" method="POST">
+          <fieldset>
+            <legend>login</legend>
+            <label for="username">username</label>
+            <input type="name"
+            name="username" id="username" class="username">
+            <label for="password">password</label>
+            <input type="password" name="password"
+            id="password" class="password">
+            <input type="submit" value="login" name="submit" id="submit"
+            class="login_btn">
+            <a href="sign_up.html">forgot password?</a>
+          </fieldset>
+        </form>
+      </section>
     </section>
     </header>
     <main>
-      <div class="container">
-          <video src="/videos/square_eyes_test_vid.mp4" autoplay></video>
-         <div class="btn_container"> <a href="sign_up.html" class="btn">start here</a> </div>
-        <div>
-        <p class="about_se">Square-Eyes is a video sharing platform for independent film makers to share their love for film making with the world become a part of the film loving family tooday!</p></div>
-      </div>
+      
+
     </main>
   </body>
 </html>
