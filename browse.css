@@ -7,16 +7,48 @@ fieldset {
   justify-content: center;
   align-items: center;
   background-color: aliceblue;
+  flex-wrap: wrap;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
+select {
+  width: 90px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 1em;
 }
 label {
   background-color: aqua;
   border-radius: 40px;
   margin: 0 10px;
   padding: 20px;
+  font-size: 1.5em;
+  white-space: nowrap;
 }
-.hide {
-  display: none;
+fieldset .center {
+  width: 65%;
+  min-width: 500px;
+  height: 65px;
+  display: flex;
+  align-items: center;
 }
+fieldset .left {
+  width: 35%;
+  min-width: 500px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+}
+input {
+}
+.search {
+  width: 500px;
+  height: 50px;
+  font-size: 1.5em;
+}
+
 video {
   width: 100%;
   position: relative;
@@ -25,15 +57,19 @@ video {
   width: 400px;
   position: relative;
 }
-.vid_overlay {
+.video_element:hover > .vid_overlay {
   width: 100%;
   background-color: rgba(1, 1, 1, 0.5);
   padding: 5px;
   margin-bottom: 5px;
+  display: block;
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 1;
+}
+.vid_overlay {
+  display: none;
 }
 .vid_overlay .container {
   display: flex;

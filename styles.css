@@ -24,6 +24,7 @@ a {
   font-size: 1.76em;
   text-decoration: none;
   color: black;
+  white-space: nowrap;
 }
 p {
   font-family: alternate-gothic-no-1-d, sans-serif;
@@ -46,7 +47,10 @@ h5 {
   font-weight: 200;
   text-transform: capitalize;
 }
-
+.center {
+  width: 100%;
+  margin: auto;
+}
 .text_center {
   width: 100%;
   text-align: center;
@@ -55,6 +59,13 @@ h5 {
   position: sticky;
   top: 0;
   z-index: 5;
+}
+.hide {
+  display: none;
+}
+.left {
+  margin-right: auto;
+  width: 100%;
 }
 /*HEADER*/
 header {
@@ -88,9 +99,7 @@ nav {
   align-items: center;
   display: flex;
 }
-.right {
-  margin-left: auto;
-}
+
 .space {
   max-width: 120px;
   background-color: #009df8;
