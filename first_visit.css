@@ -1,0 +1,24 @@
+.container {
+  background-color: rgba(240, 248, 255, 0.5);
+  width: 90%;
+  text-align: center;
+}
+video {
+  max-width: 65%;
+  margin: 20px 5px;
+}
+.btn {
+  background-color: #48bbff;
+  color: white;
+  padding: 5px 20px;
+  font-size: 4em;
+  border-radius: 50px;
+  margin-bottom: 100px;
+}
+.btn_container {
+  margin-bottom: 50px;
+}
+.about_se {
+  width: 30%;
+  margin: 20px auto;
+}

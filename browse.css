@@ -1,0 +1,54 @@
+.main_content {
+  width: 90%;
+  background-color: aliceblue;
+}
+fieldset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+}
+label {
+  background-color: aqua;
+  border-radius: 40px;
+  margin: 0 10px;
+  padding: 20px;
+}
+.hide {
+  display: none;
+}
+video {
+  width: 100%;
+  position: relative;
+}
+.video_element {
+  width: 400px;
+  position: relative;
+}
+.vid_overlay {
+  width: 100%;
+  background-color: rgba(1, 1, 1, 0.5);
+  padding: 5px;
+  margin-bottom: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.vid_overlay .container {
+  display: flex;
+}
+.output {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+h2,
+h3 {
+  color: white;
+  font-size: 2em;
+}
+h3 {
+  font-size: 1em;
+}

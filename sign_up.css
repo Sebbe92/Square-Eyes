@@ -1,0 +1,62 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+.viewer {
+  background-image: url(img/pexels-rakicevic-nenad-1274260.jpg);
+  background-size: cover;
+  max-width: 98%;
+  min-width: 50%;
+  position: sticky;
+}
+.maker {
+  position: sticky;
+  background-image: url(img/pexels-koolshooters-7346304.jpg);
+  background-size: cover;
+  max-width: 98%;
+  min-width: 50%;
+}
+legend {
+  text-align: center;
+  font-size: 4em;
+  font-weight: bold;
+}
+.sign_up_form {
+  width: 800px;
+  max-width: 95%;
+  background-color: rgba(244, 249, 252, 0.5);
+  margin: 10% auto;
+  padding-top: 50px;
+  border-radius: 40px;
+}
+label {
+  font-size: 3em;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+fieldset {
+  width: 80%;
+  margin: 0 auto;
+  border: none;
+}
+input {
+  display: block;
+  height: 50px;
+  width: 99%;
+  margin: 0 0 10px auto;
+}
+.btn {
+  margin: 50px 0;
+  background-color: aqua;
+  border-radius: 20px;
+  font-size: 3em;
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 600px) {
+  legend {
+    font-size: 3em;
+  }
+  label {
+    font-size: 2em;
+  }
+}
