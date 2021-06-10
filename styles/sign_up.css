@@ -1,7 +1,10 @@
 main {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  height: 90.7vh;
 }
+
 .viewer {
   background-image: url(/img/pexels-rakicevic-nenad-1274260.jpg);
   background-size: cover;
@@ -10,11 +13,11 @@ main {
   position: sticky;
 }
 .maker {
-  position: sticky;
   background-image: url(/img/pexels-koolshooters-7346304.jpg);
   background-size: cover;
   max-width: 98%;
   min-width: 50%;
+  position: sticky;
 }
 legend {
   text-align: center;
@@ -33,7 +36,7 @@ legend {
   margin-top: 20px;
 }
 
-label {
+.sign_up label {
   font-size: 3em;
   text-transform: capitalize;
   margin-bottom: 10px;
@@ -67,5 +70,13 @@ input {
   }
   label {
     font-size: 2em;
+  }
+  .temp_btn {
+    font-size: 2em;
+  }
+  .maker,
+  .viewer {
+    width: 100%;
+    margin: 0;
   }
 }

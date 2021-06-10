@@ -96,20 +96,26 @@
       <section class="sort">
         <form action="#" method="GET">
         <fieldset>
-        <div class="left"><label for="a-z">a-z</label>
-        <input type="radio" name="sort" id="a-z" class="hide">
-        <label for="views">views</label>
-        <input type="radio" name="sort" id="views" class="hide">
-        <label for="recent">recent</label>
-        <input type="radio" name="sort" id="recent" class="hide">
-        <label for="rating">rating</label>
-        <input type="radio" name="sort" id="rating" class="hide">
-        <select name="genre" id="genre">
-          <option value="genre">genre</option>
-          <option value="horror">horror</option>
-          <option value="comedy">comedy</option>
-        </select></div>
-        <div class="center">
+        <div class="left">
+          <div class="flex_container">
+            <label for="a-z">a-z</label>
+            <input type="radio" name="sort" id="a-z" class="hide">
+            <label for="views">views</label>
+            <input type="radio" name="sort" id="views" class="hide">
+          </div>
+          <div class="flex_container">
+            <label for="recent">recent</label>
+            <input type="radio" name="sort" id="recent" class="hide">
+            <label for="rating">rating</label>
+            <input type="radio" name="sort" id="rating" class="hide">
+            <select name="genre" id="genre">
+            <option value="genre">genre</option>
+            <option value="horror">horror</option>
+            <option value="comedy">comedy</option>
+            </select>
+          </div>
+        </div>
+        <div class="right">
         <input type="search" name="search" id="search" class="search">
         
         <button type="submit"><svg id="Group_44" data-name="Group 44" xmlns="http://www.w3.org/2000/svg" width="60" height="56" viewBox="0 0 60 56">
@@ -126,13 +132,16 @@
       <section class="output">
         <div class="video_element">
           <video src="/videos/square_eyes_test_vid.mp4" type="video/mp4" onclick="play()">sorry looks like something went wrong</video> <div class="vid_overlay"><h2>feel the magic</h2>
-            <div class="container"><h3>neon film studio</h3><h5 class="vid_tag">horror</h5>
+            <div class="container">
+              <h3>neon film studio</h3><h5 class="vid_tag">horror</h5>
           </div>
         </div>
       </div>
       <div class="video_element">
         <video src="/videos/square_eyes_test_vid.mp4" type="video/mp4" onclick="play()">sorry looks like something went wrong</video> <div class="vid_overlay"><h2>feel the magic</h2>
-          <div class="container"><h3>neon film studio</h3><h5 class="vid_tag">horror</h5>
+          <div class="container">
+            <h3>neon film studio</h3>
+            <h5 class="vid_tag">horror</h5>
         </div>
       </div>
     </div>

@@ -1,50 +1,68 @@
+main {
+  display: flex;
+  justify-content: center;
+}
 .main_content {
   width: 90%;
   background-color: aliceblue;
 }
+
+.sort {
+  background-color: aliceblue;
+  width: 100%;
+}
 fieldset {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aliceblue;
   flex-wrap: wrap;
+}
+fieldset .left {
+  width: 40%;
+  min-width: 400px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+fieldset .right {
+  min-width: 400px;
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.flex_container {
+  height: 50px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
 }
 button {
   background-color: transparent;
   border: none;
+  margin-right: 5%;
 }
 select {
   width: 90px;
   height: 40px;
   border-radius: 20px;
   font-size: 1em;
+  margin: 20px;
 }
 label {
-  background-color: aqua;
+  background-color: gray;
   border-radius: 40px;
-  margin: 0 10px;
-  padding: 20px;
   font-size: 1.5em;
+  padding: 4px;
+  margin: 5px;
   white-space: nowrap;
 }
-fieldset .center {
-  width: 65%;
-  min-width: 500px;
-  height: 65px;
-  display: flex;
-  align-items: center;
-}
-fieldset .left {
-  width: 35%;
-  min-width: 500px;
-  height: 65px;
-  display: flex;
-  align-items: center;
-}
 .search {
-  width: 500px;
+  width: 90%;
   height: 50px;
   font-size: 1.5em;
+  margin-right: 10%;
 }
 
 video {
@@ -85,4 +103,25 @@ h3 {
 }
 h3 {
   font-size: 1em;
+}
+@media screen and (max-width: 1200px) {
+  .video_element:hover > .vid_overlay {
+    display: none;
+  }
+  .vid_overlay {
+    width: 100%;
+    background-color: rgba(1, 1, 1, 0.5);
+    padding: 5px;
+    margin-bottom: 5px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .main_content {
+    width: 99%;
+  }
+}
+@media screen and (max-width: 800px) {
 }

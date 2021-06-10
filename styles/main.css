@@ -11,10 +11,9 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
-main {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+/*variables*/
+:root {
+  --widget-bg-color: #f4f9fc;
 }
 /*GLOBAL*/
 html {
@@ -32,7 +31,7 @@ a {
   white-space: nowrap;
 }
 p {
-  font-family: alternate-gothic-no-1-d, sans-serif;
+  font-family: "alternate-gothic-no-1-d", sans-serif;
   font-style: 200;
   font-weight: 600;
   font-size: 1em;
@@ -42,7 +41,7 @@ h2,
 h3,
 label,
 legend {
-  font-family: komu-a, sans-serif;
+  font-family: "komu-a", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 2.5em;
@@ -67,7 +66,6 @@ label {
   text-align: center;
 }
 .text_center {
-  width: 100%;
   text-align: center;
 }
 .sticky_item {
@@ -81,6 +79,9 @@ label {
 .left {
   margin-right: auto;
   width: 100%;
+}
+.rounded_corners {
+  border-radius: 30px;
 }
 /*HEADER*/
 header {
@@ -98,12 +99,12 @@ header {
   z-index: 10;
 }
 .hamburger_label {
-  margin: 5%;
-  align-self: center;
+  align-items: center;
+  margin-left: 10px;
+  padding: 10px;
 }
 .logo {
-  margin: auto 20px auto 4%;
-  height: 85px;
+  margin: 1px 20px 0 10px;
 }
 .logo img {
   height: 80px;
@@ -143,13 +144,6 @@ header ul {
   align-items: center;
 }
 
-.hamburger {
-  display: none;
-}
-.hamburger_label {
-  display: none;
-}
-
 .profile_img {
   border-radius: 50%;
   width: 90px;
@@ -169,6 +163,89 @@ header ul {
 /*HACKS*/
 .checkbox_hack {
   display: none;
+}
+/*hamburger overlay*/
+.menu_overlay {
+  background-color: #009df8;
+  display: none;
+  flex-direction: column;
+  width: 250px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.menu_overlay .flex_container {
+  display: flex;
+  flex-direction: row;
+}
+.menu_overlay .second_nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu_overlay .second_nav a {
+  padding: 5px;
+}
+#hamburger:checked ~ .menu_overlay {
+  display: flex;
+}
+/*login overlay*/
+.login_widget {
+  background-color: #f4f9fc;
+  border-radius: 30px;
+  padding: 30px 50px;
+  position: absolute;
+  top: 3;
+  right: 0;
+  display: none;
+}
+.login_widget form a {
+  text-align: center;
+  font-size: 1em;
+}
+.login_widget legend {
+  display: none;
+}
+.login_widget fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  height: fit-content;
+}
+.login_widget input,
+.login_widget label {
+  margin: 0 auto;
+  display: block;
+  width: 300px;
+  font-size: 2em;
+}
+.login_widget input {
+  height: 50px;
+  margin-bottom: 10px;
+}
+.login_btn {
+  background-color: white;
+  border-radius: 30px;
+  font-family: "Zen Dots", cursive;
+  font-size: 1.76em;
+  text-decoration: none;
+  color: black;
+  white-space: nowrap;
+}
+.login {
+  text-align: center;
+  display: none;
+}
+.login_label {
+  font-family: "Zen Dots", cursive;
+  font-size: 1.76em;
+  text-decoration: none;
+  color: black;
+  white-space: nowrap;
+}
+.login:checked ~ .login_widget {
+  display: block;
 }
 @media screen and (max-width: 1100px) {
   /*HEADER*/

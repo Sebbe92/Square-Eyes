@@ -11,16 +11,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/sign_up.css">
+    <link rel="stylesheet" href="/styles/upload.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign-up</title>
+  <title>Upload</title>
 </head>
 <body>
   <header>
-    <label for="hamburger" class="hamburger_label"
-      ><svg
+    <label for="hamburger" class="hamburger_label" >
+      <svg
         xmlns="http://www.w3.org/2000/svg"
         width="51.006"
         height="44.899"
@@ -91,5 +91,77 @@
     <a href="#">sign-up</a>
   </section>
   </header>
-  <body></body>
+  <main>
+    <section class="preview">
+      <h2>preview</h2>
+      <div class="vid">
+        <video
+          src="/videos/square_eyes_test_vid.mp4"
+          title="Feel The Magic"
+          type="video/mp4"
+          controls
+          id="myvideo"
+        >
+          Browser not supported
+        </video>
+        <h3>the movie with the solider</h3>
+        <div class="under_title">
+          <h4>neon film studio</h4>
+          <h5 class="vid_tag">horror</h5>
+        </div>
+      </div>
+      <div class="textfield">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Repudiandae totam iure alias qui et? Fugiat necessitatibus vel,
+          distinctio perferendis velit ducimus sit. Voluptate voluptas,
+          harum suscipit magni quos voluptatum rem.
+        </p>
+      </div>
+      <div class="video_element">
+        <video src="/videos/square_eyes_test_vid.mp4" type="video/mp4" onclick="play()">sorry looks like something went wrong</video> <div class="vid_overlay"><h2>feel the magic</h2>
+          <div class="container">
+            <h3>neon film studio</h3><h5 class="vid_tag">horror</h5>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="settings">
+      <form action="#" method="POST">
+        <fieldset>
+          <div class="grid_container">
+          <div class="file_container text_center">
+            <label for="file" >files</label>
+            <input type="file" name="file" id="file"
+            class="file" accept="video/mp4">
+          </div>
+          <div class="title_container rounded_corners text_center">
+            <label for="title">title</label>
+            <input type="text" name="title" id="title"
+            class="title">
+          </div>
+            <div class="display_file_container rounded_corners text_center">
+              <p>files are displayed here</p>
+            </div>
+            <div class="tag_container rounded_corners text_center">
+              <label for="tags">tags</label>
+              <input type="text" name="tags"
+              id="tags"
+              class="tags">
+            </div>
+            <div class="about_container rounded_corners text_center">
+              <label for="about">about</label>
+              <input type="text" name="about" id="about" class="about">
+            </div>
+            <div class="thumbnail_container rounded_corners text_center" >
+              <label for="thumbnail">thumbnail</label>
+              <input type="file" id= "thumbnail" name="thumbnail" class="thumbnail">
+            </div>
+          </div>
+        </fieldset>
+      </form>
+
+    </section>
+  </main>
+</body>
 </html>
