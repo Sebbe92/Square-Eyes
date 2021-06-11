@@ -170,4 +170,8 @@ fieldset {
   .thumbnail_container {
     width: 100%;
   }
+  .grid_container {
+    display: flex;
+    flex-direction: column;
+  }
 }
