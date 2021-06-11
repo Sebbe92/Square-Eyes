@@ -7,8 +7,12 @@ main {
   width: 45%;
   min-width: 400px;
   background-color: var(--widget-bg-color);
-  text-align: center;
   margin-top: 40px;
+  padding: 10px;
+}
+.preview h2 {
+  text-align: center;
+  margin: 10px;
 }
 .settings {
   width: 45%;
@@ -21,11 +25,6 @@ main {
   position: relative;
 }
 
-.preview_overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
 .preview_overlay p {
   color: white;
   text-align: center;
@@ -42,6 +41,7 @@ video {
 .video_element {
   width: 400px;
   position: relative;
+  display: none;
 }
 .video_element:hover > .vid_overlay {
   width: 100%;
@@ -60,13 +60,21 @@ video {
 .vid_overlay .container {
   display: flex;
 }
+/*upload form*/
+fieldset {
+  border: none;
+}
+.settings input {
+  height: 40px;
+  font-size: 1.5em;
+}
 
 .file_container {
+  height: 160px;
   background-color: var(--widget-bg-color);
   grid-area: a;
 }
 .title_container {
-  display: block;
   height: 160px;
   background-color: var(--widget-bg-color);
   grid-area: b;
@@ -84,10 +92,19 @@ video {
   background-color: var(--widget-bg-color);
   grid-area: d;
 }
+.tag_container input {
+  width: 90%;
+}
+
 .about_container {
   height: 200px;
   background-color: var(--widget-bg-color);
   grid-area: e;
+}
+.about_container textarea {
+  width: 90%;
+  resize: none;
+  font-size: 1.5em;
 }
 .thumbnail_container {
   height: 150px;
@@ -95,7 +112,6 @@ video {
   grid-area: f;
 }
 .grid_container {
-  width: 100%;
   height: 745px;
   display: grid;
   gap: 10px;
@@ -105,11 +121,23 @@ video {
     "d e"
     "f f";
 }
+
 .grid_container label {
   display: block;
   text-align: left;
-  margin: 10px;
+  margin: 15px 0 15px 20px;
 }
+
 .thumbnail_container label {
   text-align: center;
+}
+@media screen and (max-width: 800px) {
+  main {
+    display: block;
+    padding: 5px;
+  }
+  .preview,
+  .settings {
+    width: 100%;
+  }
 }

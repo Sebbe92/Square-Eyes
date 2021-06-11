@@ -14,10 +14,11 @@ body {
 /*variables*/
 :root {
   --widget-bg-color: #f4f9fc;
+  --button-hover-color: #009df8;
 }
 /*GLOBAL*/
 html {
-  background-image: url(img/pexels-pixabay-414781.jpg);
+  background-image: url(/img/pexels-pixabay-414781.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -33,8 +34,8 @@ a {
 p {
   font-family: "alternate-gothic-no-1-d", sans-serif;
   font-style: 200;
-  font-weight: 600;
-  font-size: 1em;
+  font-weight: 300;
+  font-size: 1.5em;
 }
 h1,
 h2,
@@ -60,6 +61,9 @@ label {
   font-size: 2.5em;
   text-transform: capitalize;
 }
+ul {
+  list-style-type: none;
+}
 .center {
   width: 100%;
   margin: auto;
@@ -83,6 +87,10 @@ label {
 .rounded_corners {
   border-radius: 30px;
 }
+.current {
+  color: gray;
+}
+
 /*HEADER*/
 header {
   width: 100%;
@@ -99,7 +107,6 @@ header {
   z-index: 10;
 }
 .hamburger_label {
-  align-items: center;
   margin-left: 10px;
   padding: 10px;
 }
@@ -109,7 +116,7 @@ header {
 .logo img {
   height: 80px;
 }
-nav {
+.sec_nav {
   width: 100%;
   height: 90px;
   align-items: center;
@@ -118,27 +125,23 @@ nav {
 
 .space {
   max-width: 120px;
-  background-color: #009df8;
 }
-nav a {
+.sec_nav a {
   padding: 10px;
 }
-nav a:hover,
+.sec_nav a:hover,
 .login_signup a:hover {
   font-size: 2em;
-  color: #009df8;
+  color: var(--button-hover-color);
 }
-.current {
-  color: gray;
-}
-header ul {
+
+.sec_nav ul {
   display: flex;
-  list-style-type: none;
   align-items: center;
   height: 90px;
 }
 
-.right a {
+header .right a {
   float: right;
   font-size: 1.38em;
   align-items: center;
@@ -166,29 +169,37 @@ header ul {
 }
 /*hamburger overlay*/
 .menu_overlay {
-  background-color: #009df8;
-  display: none;
-  flex-direction: column;
+  background-color: var(--widget-bg-color);
   width: 250px;
   height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
+  display: none;
 }
 .menu_overlay .flex_container {
   display: flex;
   flex-direction: row;
 }
-.menu_overlay .second_nav {
+.menu_overlay li {
+  background-color: gray;
+  width: 100%;
+  border: solid black 2px;
+  margin-bottom: 2px;
+}
+
+.menu_overlay li a {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
 }
-.menu_overlay .second_nav a {
-  padding: 5px;
+.menu_overlay li a:hover {
+  background-color: var(--button-hover-color);
 }
+
 #hamburger:checked ~ .menu_overlay {
-  display: flex;
+  display: block;
 }
 /*login overlay*/
 .login_widget {
@@ -196,9 +207,11 @@ header ul {
   border-radius: 30px;
   padding: 30px 50px;
   position: absolute;
-  top: 3;
+  top: 1;
   right: 0;
   display: none;
+  z-index: 2;
+  margin-top: 16px;
 }
 .login_widget form a {
   text-align: center;
@@ -253,19 +266,14 @@ header ul {
     position: relative;
   }
   .logo {
-    margin: auto;
+    margin-right: auto;
   }
-  nav,
-  .profile_img {
+  .sec_nav {
     display: none;
   }
   .login_signup {
+    width: 100px;
     margin-left: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .hamburger_label {
     display: block;
   }
   /*MAIN*/
@@ -281,9 +289,7 @@ header ul {
   .news img {
     min-width: 100%;
   }
-  .featured__movie {
-    min-width: 50%;
-  }
+
   .featured p {
     font-size: 1.5em;
   }

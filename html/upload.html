@@ -19,8 +19,8 @@
 </head>
 <body>
   <header>
-    <label for="hamburger" class="hamburger_label" >
-      <svg
+    <label for="hamburger" class="hamburger_label"
+      ><svg
         xmlns="http://www.w3.org/2000/svg"
         width="51.006"
         height="44.899"
@@ -67,15 +67,82 @@
       id="hamburger"
       class="checkbox_hack"
     />
+    <section class="menu_overlay">
+      <div class="flex_container">
+      <label for="hamburger" class="hamburger_label"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="51.006"
+        height="44.899"
+        viewBox="0 0 51.006 44.899"
+      >
+        <g
+          id="Group_189"
+          data-name="Group 189"
+          transform="translate(-43.997 -127.05)"
+        >
+          <line
+            id="Line_30"
+            data-name="Line 30"
+            x2="51.006"
+            transform="translate(43.997 128.05)"
+            fill="none"
+            stroke="#0d0d0d"
+            stroke-width="2"
+          />
+          <line
+            id="Line_29"
+            data-name="Line 29"
+            x2="51.006"
+            transform="translate(43.997 149.5)"
+            fill="none"
+            stroke="#0d0d0d"
+            stroke-width="2"
+          />
+          <line
+            id="Line_28"
+            data-name="Line 28"
+            x2="51.006"
+            transform="translate(43.997 170.95)"
+            fill="none"
+            stroke="#0d0d0d"
+            stroke-width="2"
+          />
+        </g>
+      </svg>
+    </label>
+    
+    <input
+      type="checkbox"
+      name="hamburger"
+      id="hamburger"
+      class="checkbox_hack"
+    />
     <a href="/html/home.html" class="logo">
-      <img src="/img/SquareEyes_Logo.png" alt="square eyes logo" />
-    </a>
-    <nav>
-      <section class="left">
+      <img src="/img/squareeyes_logo.png" alt="squareeyes logo" />
+    </div>
+      <nav>
         <ul>
+          <li><a href="/html/home.html">home</a></li>
+          <li><a href="/html/browse.html">browse</a></li>
+          <li><a href="/html/upload.html">upload</a></li>
+          <li><a href="/html/profile.html">profile</a></li>
+          <li><a href="#">contact</a></li>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">login</a></li>
+          <li><a href="#">sign-up</a></li>
+        </ul>
+      </nav>
+    </section>
+    <a href="/html/home.html" class="logo">
+      <img src="/img/squareeyes_logo.png" alt="squareeyes logo" />
+    </a>
+    <section class="sec_nav">
+      <section class="left">
+      <ul>
             <li><a href="/html/home.html" class="current cta">Home</a></li>
             <li><a href="/html/browse.html" class="cta">Browse</a></li>
-            <li><a href="#" class="cta">Upload</a></li>
+            <li><a href="/html/upload.html" class="cta">Upload</a></li>
         </ul>
       </section>
       <section class="right">
@@ -85,11 +152,9 @@
           </ul>
         </li>
       </section>
-    </nav>
-  <section class="login_signup">
-    <a href="#">login</a>
-    <a href="#">sign-up</a>
-  </section>
+    </section>
+    <a href="/html/profile.html"><img src="/img/squareeyes_logo.png" alt="squareeyes logo" class="profile_img"></a>
+    
   </header>
   <main>
     <section class="preview">
@@ -151,7 +216,7 @@
             </div>
             <div class="about_container rounded_corners text_center">
               <label for="about">about</label>
-              <input type="text" name="about" id="about" class="about">
+              <textarea name="about" id="about" cols="15" rows="5" maxlength="100"></textarea>
             </div>
             <div class="thumbnail_container rounded_corners text_center" >
               <label for="thumbnail">thumbnail</label>

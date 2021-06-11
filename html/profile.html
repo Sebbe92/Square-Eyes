@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="first_visit.css">
+    <link rel="stylesheet" href="first_visit.css" />
     <script src="scripts.js"></script>
     <link rel="shortcut icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="https://use.typekit.net/gtn5ffb.css" />
@@ -12,11 +12,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/first_visit.css">
+    <link rel="stylesheet" href="/styles/profile.css">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Square Eyes</title>
+    <title>login</title>
   </head>
   <body>
     <header>
@@ -158,12 +158,74 @@
       
     </header>
     <main>
-      <div class="container">
-          <video src="/videos/square_eyes_test_vid.mp4" autoplay></video>
-         <div class="btn_container"> <a href="/html/sign_up.html" class="btn">start here</a> </div>
-        <div>
-        <p class="about_se">Square-Eyes is a video sharing platform for independent film makers to share their love for film making with the world become a part of the film loving family tooday!</p></div>
-      </div>
+      <section class="profile_menu">
+        <a href="#">profile</a>
+        <a href="#">purchases</a>
+        <a href="#">settings</a>
+
+      </section>
+      <section class="profile_main">
+        <label for="username">username</label>
+        <input type="name" name="username" id="username" class="username_input" >
+        <form action="#" method="POST">
+          <fieldset>
+            <legend>password</legend>
+            <label for="old_password">old password</label>
+            <input type="password" name="old_password" id="old_password" class="old_password" >
+            <label for="new_password">new password</label>
+            <input type="password" name="new_password" id="new_password" class="new_password">
+            <label for="repeat_password">repeat password</label>
+            <input type="password" name="repeat_password" id="repeat_password" class="repeat_password">
+      
+            <input type="submit" value="save changes" name="submit_password" id="submit_password" class="submit_password">
+          </fieldset>
+          <section class="avatar">
+            <h2>choose avatar</h2>
+            <div class="select_avatar">
+              <div><img src="/img/squareeyes_logo.png" alt="squareeyes_logo"></div>
+              <div><img src="/img/squareeyes_logo.png" alt="squareeyes_logo"></div>
+              <div><img src="/img/squareeyes_logo.png" alt="squareeyes_logo"></div>
+              <div><img src="/img/squareeyes_logo.png" alt="squareeyes_logo"></div>
+              <div><img src="/img/squareeyes_logo.png" alt="squareeyes_logo"></div>
+              <div><img src="/img/squareeyes_logo.png" alt="squareeyes_logo"></div>
+              <div><img src="/img/squareeyes_logo.png" alt="squareeyes_logo"></div>
+              <div><img src="/img/squareeyes_logo.png" alt="squareeyes_logo"></div>
+              <div><img src="/img/squareeyes_logo.png" alt="squareeyes_logo"></div>
+              <div><img src="/img/squareeyes_logo.png" alt="squareeyes_logo"></div>
+              <div><img src="/img/squareeyes_logo.png" alt="squareeyes_logo"></div>
+              <div><img src="/img/squareeyes_logo.png" alt="squareeyes_logo"></div>
+            </div>
+            <div class="custom_avatar"><div class="container"><h3>custom</h3>
+            <input type="file" value="upload photo"></div><h4>your avatar</h4><img src="/img/squareeyes_logo.png" alt="squareeyes_logo"> <input type="submit">save</div>
+          </section>
+        </form>
+
+      </section>
+      <section class="profile_payment">
+        <div class="add_payment_method"><a href="#">add payment method</a> 
+          <svg xmlns="http://www.w3.org/2000/svg" width="111" height="111" viewBox="0 0 111 111">
+          <g id="Group_194" data-name="Group 194" transform="translate(-2338 -6733)">
+            <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(2338 6733)" fill="#48bbff" stroke="#707070" stroke-width="1">
+              <circle cx="55.5" cy="55.5" r="55.5" stroke="none"/>
+              <circle cx="55.5" cy="55.5" r="55" fill="none"/>
+            </g>
+            <line id="Line_5" data-name="Line 5" y2="69.107" transform="translate(2393.019 6753.5)" fill="none" stroke="#fff" stroke-width="7"/>
+            <line id="Line_6" data-name="Line 6" x2="64.171" transform="translate(2361.019 6788.5)" fill="none" stroke="#fff" stroke-width="7"/>
+          </g>
+        </svg>
+         </div>
+         <div class="payment_methode">
+           <p class="billing_adress">billing adress: </p>
+           <a href="#">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24.316" height="24.311" viewBox="0 0 24.316 24.311">
+            <path id="Path_26" data-name="Path 26" d="M17.939,11.131l1.243,1.243L6.944,24.609H5.7V23.367L17.939,11.131M22.8,3a1.352,1.352,0,0,0-.945.392L19.384,5.863l5.065,5.065,2.472-2.472a1.345,1.345,0,0,0,0-1.9L23.76,3.392A1.326,1.326,0,0,0,22.8,3ZM17.939,7.308,3,22.246v5.065H8.065L23,12.373Z" transform="translate(-3 -3)"/>
+             </svg>
+          </a>
+           <p class="cvc">cvc: 345</p>
+           <p class="card_nr">2344 4322 **** ****</p>
+           <div><h4>john smith</h4> <h4 class="visa">visa</h4></div>
+         </div>
+      </section>
     </main>
   </body>
 </html>

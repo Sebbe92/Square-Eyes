@@ -29,7 +29,6 @@ fieldset .right {
   min-width: 400px;
   width: 60%;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
 }
 .flex_container {
@@ -41,7 +40,6 @@ fieldset .right {
 button {
   background-color: transparent;
   border: none;
-  margin-right: 5%;
 }
 select {
   width: 90px;
@@ -50,7 +48,7 @@ select {
   font-size: 1em;
   margin: 20px;
 }
-label {
+main label {
   background-color: gray;
   border-radius: 40px;
   font-size: 1.5em;
@@ -62,7 +60,7 @@ label {
   width: 90%;
   height: 50px;
   font-size: 1.5em;
-  margin-right: 10%;
+  position: relative;
 }
 
 video {
