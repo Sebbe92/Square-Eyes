@@ -149,4 +149,10 @@ fieldset {
   .settings {
     width: 100%;
   }
+  form {
+    width: 100%;
+  }
+  fieldset {
+    width: 100%;
+  }
 }
