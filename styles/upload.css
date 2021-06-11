@@ -146,7 +146,7 @@ fieldset {
   .preview,
   .settings {
     width: 100%;
-    min-width: none;
+    min-width: 0;
     background-color: red;
   }
   form {
