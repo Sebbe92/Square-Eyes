@@ -146,14 +146,10 @@ fieldset {
   .video_element {
     width: 100%;
   }
-
   .settings {
     width: 350px;
   }
   form {
-    width: 350px;
-  }
-  fieldset {
     width: 350px;
   }
 }
