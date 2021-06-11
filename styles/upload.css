@@ -153,6 +153,12 @@ fieldset {
   .settings {
     width: 99%;
   }
+  form {
+    width: 99%;
+  }
+  fieldset {
+    width: 99%;
+  }
   .video_element {
     width: 100%;
   }
