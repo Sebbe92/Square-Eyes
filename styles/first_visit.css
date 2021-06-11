@@ -28,6 +28,9 @@ video {
   margin: 20px auto;
 }
 @media screen and (max-width: 500px) {
+  .main_container {
+    width: 100%;
+  }
   .btn {
     font-size: 2em;
   }

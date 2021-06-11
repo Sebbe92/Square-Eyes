@@ -17,7 +17,7 @@ main {
 }
 .settings {
   width: 45%;
-  min-width: 400px;
+  min-width: 350px;
   height: 60vh;
   margin-top: 40px;
 }
@@ -40,7 +40,7 @@ video {
   position: relative;
 }
 .video_element {
-  width: 400px;
+  width: 350px;
   position: relative;
   display: none;
 }
