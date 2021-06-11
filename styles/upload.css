@@ -17,7 +17,7 @@ main {
 }
 .settings {
   width: 45%;
-  min-width: 350px;
+  min-width: 200px;
   height: 60vh;
   margin-top: 40px;
 }
