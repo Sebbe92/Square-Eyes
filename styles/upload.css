@@ -146,9 +146,7 @@ fieldset {
   .video_element {
     width: 100%;
   }
-  fieldset {
+  .file_container {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
   }
 }
