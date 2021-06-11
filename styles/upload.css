@@ -40,7 +40,7 @@ video {
   position: relative;
 }
 .video_element {
-  width: 350px;
+  width: 400px;
   position: relative;
   display: none;
 }
@@ -139,6 +139,11 @@ fieldset {
   }
   .preview,
   .settings {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .video_element {
     width: 100%;
   }
 }
