@@ -146,9 +146,7 @@ fieldset {
   .video_element {
     width: 100%;
   }
-  .settings * {
-    width: 100%;
-  }
+
   .settings div {
     width: 90%;
   }
