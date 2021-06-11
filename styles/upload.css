@@ -146,8 +146,8 @@ fieldset {
   .video_element {
     width: 100%;
   }
-  .settings {
-    width: 100%;
+  .settings * {
+    max-width: 100%;
   }
   .settings div {
     max-width: 100%;
