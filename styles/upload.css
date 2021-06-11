@@ -155,6 +155,12 @@ fieldset {
     width: 350px;
   }
   div {
+    width: 100px;
+  }
+  form {
+    width: 350px;
+  }
+  fieldset {
     width: 350px;
   }
 }
