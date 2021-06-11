@@ -1,3 +1,4 @@
+@import url(/styles/main.css);
 main {
   display: flex;
   justify-content: space-around;

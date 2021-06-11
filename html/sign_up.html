@@ -10,7 +10,6 @@
       href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/sign_up.css"/>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -129,8 +128,8 @@
           <li><a href="/html/profile.html">profile</a></li>
           <li><a href="#">contact</a></li>
           <li><a href="#">about us</a></li>
-          <li><a href="#">login</a></li>
-          <li><a href="/html/sign_up.html">sign-up</a></li>
+          <li><a href="#">sign-up</a></li>
+          <li><a href="/html/dev.html">dev</a></li>
         </ul>
       </nav>
     </section>
@@ -153,8 +152,29 @@
         </li>
       </section>
     </section>
+    <input type="checkbox" name="logged_in" id="logged_in" class="logged_in">
     <a href="/html/profile.html"><img src="/img/squareeyes_logo.png" alt="squareeyes logo" class="profile_img"></a>
     
+    <div class="login_signup">
+      <label for="login" class="cta">login</label>
+      <input type="checkbox" name="login" id="login" class="login">
+      <a href="/html/sign_up.html" class="cta">sign-up</a>
+    
+      <div class="login_widget">
+        <form action="#" method="POST">
+          <fieldset>
+            <label for="login_username">username</label>
+            <input type="name" name="login_username" id="login_username" class="login_username">
+            <label for="login_password">password</label>
+            <input type="password" name="login_password" id="login_password" class="login_password">
+            <input type="submit" value="login" disabled>
+            <a href="/html/home.html">login</a>
+            <a href="/html/sign_up.html">forgot password?</a>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  
   </header>
   <main>
     <section class="viewer">
@@ -175,7 +195,7 @@
         </fieldset>
         </form>
         <div class="center">
-          <a href="/html/home.html" class="temp_btn">create account</a>
+          <a href="/html/home.html" class="temp_btn cta">create account</a>
          </div>
       </div>
 
@@ -197,7 +217,7 @@
         </fieldset>
         </form>
         <div class="center">
-         <a href="/html/home.html" class="temp_btn">create account</a>
+         <a href="/html/home.html" class="temp_btn cta">create account</a>
         </div>
       </div>
 
