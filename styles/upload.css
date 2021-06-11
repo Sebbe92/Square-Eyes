@@ -152,6 +152,9 @@ fieldset {
   }
   .grid_container {
     gap: 5px;
-    width: 95%;
+    width: 350px;
+  }
+  div {
+    width: 350px;
   }
 }
