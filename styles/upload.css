@@ -103,7 +103,7 @@ fieldset {
   grid-area: e;
 }
 .about_container textarea {
-  width: 90%;
+  width: 85%;
   resize: none;
   font-size: 1.5em;
 }
@@ -147,6 +147,7 @@ fieldset {
   .settings {
     width: 100%;
     min-width: none;
+    background-color: red;
   }
   form {
     width: 99%;
@@ -159,7 +160,7 @@ fieldset {
   }
 
   .file_container {
-    max-width: 350px;
+    width: 348px;
   }
   .file_container {
     max-width: 100%;
