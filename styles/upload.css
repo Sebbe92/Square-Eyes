@@ -131,9 +131,7 @@ fieldset {
 .thumbnail_container label {
   text-align: center;
 }
-.file_container {
-  width: 350px;
-}
+
 @media screen and (max-width: 800px) {
   main {
     display: block;
@@ -147,5 +145,8 @@ fieldset {
 @media screen and (max-width: 500px) {
   .video_element {
     width: 100%;
+  }
+  .settings {
+    width: 350px;
   }
 }
