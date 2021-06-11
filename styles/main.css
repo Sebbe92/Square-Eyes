@@ -317,7 +317,7 @@ header .right a {
   }
 }
 @media screen and (max-width: 500px) {
-  .logo {
+  .logo img {
     width: 20%;
   }
 }
