@@ -163,9 +163,9 @@ fieldset {
     width: 348px;
   }
   .file_container {
-    max-width: 100%;
+    width: 100%;
   }
   .thumbnail_container {
-    max-width: 100%;
+    width: 100%;
   }
 }
