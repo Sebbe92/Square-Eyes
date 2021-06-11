@@ -150,13 +150,6 @@ fieldset {
   .settings {
     width: 350px;
   }
-  .grid_container {
-    gap: 5px;
-    width: 350px;
-  }
-  div {
-    width: 100px;
-  }
   form {
     width: 350px;
   }
