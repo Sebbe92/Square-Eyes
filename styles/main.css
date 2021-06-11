@@ -318,6 +318,6 @@ header .right a {
 }
 @media screen and(max-width: 400px) {
   .logo {
-    width: 20%;
+    display: none;
   }
 }
