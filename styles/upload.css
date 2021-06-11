@@ -150,4 +150,8 @@ fieldset {
   .settings div {
     width: 90%;
   }
+  .grid_container {
+    gap: 5px;
+    width: 95%;
+  }
 }
