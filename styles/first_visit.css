@@ -1,8 +1,12 @@
 @import url(/styles/main.css);
-.container {
+main {
+  align-items: center;
+}
+.main_container {
   background-color: rgba(240, 248, 255, 0.5);
   width: 90%;
   text-align: center;
+  margin: 0 auto;
 }
 video {
   max-width: 65%;
@@ -22,4 +26,16 @@ video {
 .about_se {
   width: 30%;
   margin: 20px auto;
+}
+@media screen and (max-width: 500px) {
+  .btn {
+    font-size: 2em;
+  }
+  video {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+  .about_se {
+    width: 100%;
+  }
 }
