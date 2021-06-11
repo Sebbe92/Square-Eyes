@@ -131,6 +131,9 @@ fieldset {
 .thumbnail_container label {
   text-align: center;
 }
+.file_container {
+  width: 350px;
+}
 @media screen and (max-width: 800px) {
   main {
     display: block;
