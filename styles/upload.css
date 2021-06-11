@@ -167,7 +167,7 @@ fieldset {
   }
 
   .file_container {
-    width: 100%;
+    max-width: 350px;
   }
   .file_container {
     max-width: 100%;
