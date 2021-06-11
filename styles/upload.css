@@ -166,4 +166,10 @@ fieldset {
   .file_container {
     width: 100%;
   }
+  .file_container {
+    max-width: 100%;
+  }
+  .thumbnail_container {
+    max-width: 100%;
+  }
 }
