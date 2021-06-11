@@ -316,3 +316,8 @@ header .right a {
     top: 0;
   }
 }
+@media screen and(max-width: 350px) {
+  .logo {
+    width: 20%;
+  }
+}
