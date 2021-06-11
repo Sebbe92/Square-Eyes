@@ -318,10 +318,9 @@ header .right a {
 }
 @media screen and (max-width: 500px) {
   .logo img {
-    width: 50px;
+    width: 100%;
   }
   .logo {
-    width: 50px;
-    background-color: red;
+    width: 20%;
   }
 }
