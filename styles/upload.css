@@ -143,18 +143,9 @@ fieldset {
   }
 }
 @media screen and (max-width: 500px) {
-  html {
-    width: 100%;
-  }
-  main {
-    width: 100%;
-    justify-content: center;
-  }
-  .preview {
-    width: 99%;
-  }
+  .preview,
   .settings {
-    width: 99%;
+    min-width: none;
   }
   form {
     width: 99%;
