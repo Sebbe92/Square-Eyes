@@ -151,9 +151,11 @@ fieldset {
   }
   form {
     width: 99%;
+    background-color: green;
   }
   fieldset {
     width: 99%;
+    background-color: blue;
   }
   .video_element {
     width: 100%;
