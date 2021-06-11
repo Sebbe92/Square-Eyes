@@ -157,4 +157,7 @@ fieldset {
     display: flex;
     flex-wrap: wrap;
   }
+  .grid_container {
+    width: 100%;
+  }
 }
