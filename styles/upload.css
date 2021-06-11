@@ -154,7 +154,7 @@ fieldset {
     background-color: green;
   }
   fieldset {
-    width: 350px;
+    width: 5px;
     background-color: blue;
   }
   .video_element {
@@ -162,7 +162,7 @@ fieldset {
   }
 
   .file_container {
-    width: 348px;
+    width: 200px;
   }
   .file_container {
     width: 100%;
@@ -173,5 +173,8 @@ fieldset {
   .grid_container {
     display: flex;
     flex-direction: column;
+  }
+  .file {
+    display: none;
   }
 }
