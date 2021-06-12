@@ -1,4 +1,5 @@
 @import url(/styles/main.css);
+
 main {
   display: flex;
   justify-content: space-around;
@@ -6,7 +7,7 @@ main {
 }
 .preview {
   width: 45%;
-  min-width: 400px;
+
   background-color: var(--widget-bg-color);
   margin-top: 40px;
   padding: 10px;
@@ -65,11 +66,6 @@ video {
 fieldset {
   border: none;
 }
-.settings input {
-  height: 40px;
-  font-size: 1.5em;
-}
-
 .file_container {
   height: 160px;
   background-color: var(--widget-bg-color);
@@ -93,7 +89,8 @@ fieldset {
   background-color: var(--widget-bg-color);
   grid-area: d;
 }
-.tag_container input {
+.tag_container input,
+.title_container input {
   width: 90%;
 }
 
@@ -120,6 +117,7 @@ fieldset {
     "b c"
     "d e"
     "f f";
+  grid-template-columns: 1fr 1fr;
 }
 
 .grid_container label {
@@ -131,50 +129,10 @@ fieldset {
 .thumbnail_container label {
   text-align: center;
 }
-
-@media screen and (max-width: 800px) {
-  main {
-    display: block;
-    padding: 5px;
-  }
-  .preview,
-  .settings {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 500px) {
-  .preview,
-  .settings {
-    width: 100%;
-    min-width: 0;
-    background-color: red;
-  }
-  form {
+@media screen and (max-width: 820px) {
+  .settings,
+  .preview {
     width: 99%;
-    background-color: green;
-  }
-  fieldset {
-    width: 5px;
-    background-color: blue;
-  }
-  .video_element {
-    width: 100%;
-  }
-
-  .file_container {
-    width: 200px;
-  }
-  .file_container {
-    width: 100%;
-  }
-  .thumbnail_container {
-    width: 100%;
-  }
-  .grid_container {
-    display: flex;
-    flex-direction: column;
-  }
-  .file {
-    display: none;
+    min-width: 0;
   }
 }

@@ -216,7 +216,7 @@
               <div class="avatar_img"><img src="/img/squareeyes_logo.png" alt="squareeyes_logo"></div>
               <div class="avatar_img"><img src="/img/squareeyes_logo.png" alt="squareeyes_logo"></div>
             </div>
-            <div class="flex_container">
+          <div class="flex_container">
             <div class="custom_avatar rounded_corners">
               <div class="container">
                 <h3>custom</h3>
@@ -226,14 +226,15 @@
               <div class="container">
                <h4>your avatar</h4><img src="/img/squareeyes_logo.png" alt="squareeyes_logo"> 
               </div>
-            </div> <input type="submit" value="save" class="save_btn cta rounded_corners"></div>
+            </div> <input type="submit" value="save" class="save_btn cta rounded_corners">
+          </div>
             
-          </section>
+        </section>
         
 
       </section>
       <section class="profile_payment">
-        <div class="add_payment_method"><a href="#">add payment method</a> 
+        <div class="add_payment_method"><a href="#" class="cta">add payment method</a> 
           <svg xmlns="http://www.w3.org/2000/svg" width="111" height="111" viewBox="0 0 111 111">
           <g id="Group_194" data-name="Group 194" transform="translate(-2338 -6733)">
             <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(2338 6733)" fill="#48bbff" stroke="#707070" stroke-width="1">
@@ -245,17 +246,34 @@
           </g>
         </svg>
          </div>
-         <div class="payment_methode">
-           <p class="billing_adress">billing adress: </p>
-           <a href="#">
+          <div class="payment_method">
+           <div class="flex_container"><p class="billing_adress">billing adress: inser address </p>
+            <a href="#">
              <svg xmlns="http://www.w3.org/2000/svg" width="24.316" height="24.311" viewBox="0 0 24.316 24.311">
             <path id="Path_26" data-name="Path 26" d="M17.939,11.131l1.243,1.243L6.944,24.609H5.7V23.367L17.939,11.131M22.8,3a1.352,1.352,0,0,0-.945.392L19.384,5.863l5.065,5.065,2.472-2.472a1.345,1.345,0,0,0,0-1.9L23.76,3.392A1.326,1.326,0,0,0,22.8,3ZM17.939,7.308,3,22.246v5.065H8.065L23,12.373Z" transform="translate(-3 -3)"/>
-             </svg>
-          </a>
-           <p class="cvc">cvc: 345</p>
-           <p class="card_nr">2344 4322 **** ****</p>
+             </svg></div>
+            </a>
+            <p class="cvc">cvc: 345</p>
+            <p class="card_nr">2344 4322 **** ****</p>
            <div><h4>john smith</h4> <h4 class="visa">visa</h4></div>
          </div>
+        </div>
+        <div class="payment_method">
+          <form action="#" method="POST">
+            <fieldset>
+              <legend>payment method</legend>
+              <textarea name="adress" id="adress" class="adress" cols="0" rows="2" value="sesam stasjon 0145 lørenskog" required ></textarea>
+              <input type="text" name= "cvc" id="cvc" class="cvc" value="654" maxlength="3" minlength="3"
+              required >
+              <input type="text" name="card_num" id="card_num" class="card_num" value="1450 1540 **** ****" maxlength="16" minlength="16" required>
+              <input type="name" name= name id="name" value="John Smith" required>
+              <select name="payment_options" id="payment_options" class="payment_options">
+                <option value="visa">visa</option>
+              </select>
+
+
+            </fieldset>
+          </form>
         </div>
       </section>
     </main>

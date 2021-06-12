@@ -83,7 +83,7 @@ main {
 }
 
 .custom_avatar {
-  width: 300px;
+  max-width: 300px;
   height: 120px;
   border: solid 1px black;
   display: flex;
@@ -105,12 +105,7 @@ main {
   padding: 5px;
   margin-top: 10px;
 }
-.profile_payment {
-  width: 30%;
-  min-width: 400px;
-  height: fit-content;
-  flex: 2;
-}
+
 .avatar .container {
   width: 50%;
   margin: 5px;
@@ -121,6 +116,56 @@ main {
 }
 .custom_avatar img {
   margin: 0 auto;
+}
+.profile_payment {
+  width: 30%;
+  min-width: 400px;
+  height: fit-content;
+  flex: 2;
+}
+.add_payment_method {
+  width: auto;
+  border-radius: 0 70px 70px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-top: 40px;
+}
+.add_payment_method a {
+  font-size: 1.5em;
+  margin: 0 30px 10px 10px;
+}
+.payment_method {
+  width: 80%;
+  height: 220px;
+  border-radius: 40px;
+  background-color: var(--widget-bg-color);
+  padding: 20px;
+  margin: 20px auto;
+}
+.payment_method input {
+  width: 100%;
+}
+
+/*payment widget*/
+#cvc {
+  width: 48px;
+}
+#card_num {
+  width: 210px;
+}
+.payment_method input {
+  background-color: transparent;
+  border: none;
+}
+.payment_method ::-webkit-inner-spin-button,
+.payment_method ::-webkit-outer-spin-button {
+  display: none;
+}
+#adress {
+  width: 100%;
+  font-size: 1.5em;
 }
 @media screen and (max-width: 800px) {
   .profile_main {
@@ -135,5 +180,22 @@ main {
   }
   .profile_menu {
     margin-top: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .profile_main {
+    width: 100%;
+    min-width: 200px;
+  }
+  .profile_main .flex_container {
+    flex-direction: column;
+    background-color: aqua;
+  }
+  .flexcontainer .save_btn {
+    margin: none;
+  }
+  .profile_payment {
+    width: 100%;
+    min-width: 300px;
   }
 }
