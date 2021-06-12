@@ -27,18 +27,13 @@ fieldset .left {
   align-items: center;
   flex-wrap: wrap;
 }
-fieldset .right {
+fieldset .search_n_button {
   min-width: 400px;
   width: 60%;
   display: flex;
   align-items: center;
 }
-.flex_container {
-  height: 50px;
-  margin-left: 20px;
-  display: flex;
-  align-items: center;
-}
+
 button {
   background-color: transparent;
   border: none;
@@ -63,6 +58,10 @@ main label {
   height: 50px;
   font-size: 1.5em;
   position: relative;
+}
+.main_content button {
+  margin-left: -20px;
+  z-index: 5;
 }
 
 video {
@@ -123,5 +122,11 @@ h3 {
     width: 99%;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 450px) {
+  .search {
+    width: 90%;
+  }
+  fieldset .search_n_button {
+    min-width: 150px;
+  }
 }
