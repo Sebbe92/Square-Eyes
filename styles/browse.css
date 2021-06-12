@@ -124,10 +124,11 @@ h3 {
 }
 @media screen and (max-width: 450px) {
   .search {
-    width: 90%;
+    width: 100%;
   }
   fieldset .search_n_button {
     min-width: 150px;
+    width: 100%;
   }
   .sort {
     text-align: center;
