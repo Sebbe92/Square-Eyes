@@ -129,4 +129,7 @@ h3 {
   fieldset .search_n_button {
     min-width: 150px;
   }
+  .sort {
+    text-align: center;
+  }
 }
