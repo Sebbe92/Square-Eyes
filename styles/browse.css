@@ -6,11 +6,11 @@ main {
 }
 .main_content {
   width: 90%;
-  background-color: aliceblue;
+  background-color: var(--widget-bg-color);
 }
 
 .sort {
-  background-color: aliceblue;
+  background-color: var(--widget-bg-color);
   width: 100%;
 }
 fieldset {

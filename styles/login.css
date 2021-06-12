@@ -1,0 +1,12 @@
+@import url(/styles/main.css);
+main .login_widget {
+  width: 50%;
+  display: block;
+  position: relative;
+  margin: 100px auto;
+}
+@media screen and (max-width: 800px) {
+  main .login_widget {
+    width: 100%;
+  }
+}

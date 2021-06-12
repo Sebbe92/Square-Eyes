@@ -21,7 +21,7 @@ main .sticky_item {
 .featured,
 .news {
   max-width: 800px;
-  background-color: rgba(244, 249, 252, 0.9);
+  background-color: var(--widget-bg-color);
   align-items: center;
 }
 /*main__featured_news*/
@@ -80,4 +80,31 @@ main .sticky_item {
   margin-top: 70px;
   border-bottom: 1px solid black;
   max-width: 100%;
+}
+.current {
+  color: gray;
+}
+
+@media screen and (max-width: 1200px) {
+  /*MAIN*/
+  .featured,
+  .news {
+    flex-wrap: wrap;
+  }
+  .featured__movie {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .featured__movie img,
+  .news img {
+    min-width: 100%;
+  }
+
+  .featured p {
+    font-size: 1.5em;
+  }
+  .featured .sticky_item,
+  .news .sticky_item {
+    top: 0;
+  }
 }

@@ -13,11 +13,12 @@ body {
 }
 
 /*GLOBAL*/
-/*G-variables*/
+/*GLOBAL-variables*/
 :root {
   --widget-bg-color: rgba(244, 249, 252, 0.981);
   --button-hover-color: #009df8;
   --button-color: #48bbff;
+  --header-bg-color: #f4f9fc;
 }
 html {
   background-image: url(/img/pexels-nikita-belokhonov-5977360.jpg);
@@ -26,16 +27,7 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-.cta {
-  font-family: "Zen Dots", cursive;
-}
-a,
-header .cta {
-  font-size: 1.76em;
-  text-decoration: none;
-  color: black;
-  white-space: nowrap;
-}
+
 p,
 input,
 textarea,
@@ -83,6 +75,15 @@ textarea {
 input[type="file"] {
   width: 100%;
 }
+.cta {
+  font-size: 1.76em;
+  text-decoration: none;
+  color: black;
+  white-space: nowrap;
+}
+.cta {
+  font-family: "Zen Dots", cursive;
+}
 .center {
   width: 100%;
   margin: auto;
@@ -118,7 +119,7 @@ header {
   width: 100%;
   max-height: 90px;
   padding: 5px;
-  background-color: #f4f9fc;
+  background-color: var(--header-bg-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -151,11 +152,6 @@ header {
 .sec_nav a {
   padding: 10px;
 }
-.sec_nav a:hover,
-.login_signup a:hover {
-  font-size: 2em;
-  color: var(--button-hover-color);
-}
 
 .sec_nav ul {
   display: flex;
@@ -184,11 +180,8 @@ header .right a {
   display: block;
   margin: auto;
 }
-/*HACKS*/
-.checkbox_hack {
-  display: none;
-}
-/*hamburger overlay*/
+
+/*HEADER hamburger overlay*/
 .menu_overlay {
   background-color: var(--widget-bg-color);
   width: 250px;
@@ -203,26 +196,26 @@ header .right a {
   flex-direction: row;
 }
 .menu_overlay li {
-  background-color: gray;
   width: 100%;
   border: solid black 2px;
   margin-bottom: 2px;
 }
 .menu_overlay li a {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: aliceblue;
-}
-.menu_overlay li a:hover {
-  background-color: var(--button-hover-color);
+  display: block;
+  text-align: center;
+  background-color: var(--button-color);
 }
 
+.menu_overlay input[type="checkbox"] {
+  display: none;
+}
 #hamburger:checked ~ .menu_overlay {
   display: block;
 }
 /*login overlay*/
 .login_widget {
+  width: 350px;
   background-color: #f4f9fc;
   border-radius: 30px;
   padding: 30px 50px;
@@ -230,8 +223,8 @@ header .right a {
   top: 1;
   right: 0;
   display: none;
-  z-index: 2;
   margin-top: 16px;
+  z-index: 2;
 }
 .login_widget form a {
   text-align: center;
@@ -250,7 +243,7 @@ header .right a {
 .login_widget label {
   margin: 0 auto;
   display: block;
-  width: 300px;
+  width: 100%;
   font-size: 2em;
 }
 .login_widget input {
@@ -288,6 +281,20 @@ header .right a {
 .logged_in:checked ~ a img {
   display: block;
 }
+.checkbox_hack {
+  display: none;
+}
+/*hover*/
+.cta:hover {
+  color: var(--button-hover-color);
+}
+.sec_nav .cta:hover,
+nav .cta:hover {
+  font-size: 2em;
+}
+.menu_overlay li a:hover {
+  background-color: var(--widget-bg-color);
+}
 @media screen and (max-width: 1200px) {
   /*HEADER*/
   header {
@@ -303,27 +310,6 @@ header .right a {
     width: 100px;
     margin-left: auto;
     display: block;
-  }
-  /*MAIN*/
-  .featured,
-  .news {
-    flex-wrap: wrap;
-  }
-  .featured__movie {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .featured__movie img,
-  .news img {
-    min-width: 100%;
-  }
-
-  .featured p {
-    font-size: 1.5em;
-  }
-  .featured .sticky_item,
-  .news .sticky_item {
-    top: 0;
   }
 }
 @media screen and (max-width: 500px) {
