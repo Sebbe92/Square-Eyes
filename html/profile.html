@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="first_visit.css" />
-    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
     <link rel="stylesheet" href="https://use.typekit.net/gtn5ffb.css" />
     <link rel="stylesheet" href="https://use.typekit.net/gtn5ffb.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -15,6 +15,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="manage your purchases, change user info or find a new avatar"
+    />
     <title>login</title>
   </head>
   <body>
@@ -123,14 +127,14 @@
       </div>
         <nav>
           <ul>
-            <li><a href="/html/home.html">home</a></li>
-            <li><a href="/html/browse.html">browse</a></li>
-            <li><a href="/html/upload.html">upload</a></li>
-            <li><a href="/html/profile.html">profile</a></li>
-            <li><a href="#">contact</a></li>
-            <li><a href="#">about us</a></li>
-            <li><a href="#">sign-up</a></li>
-            <li><a href="/html/dev.html">dev</a></li>
+            <li><a href="/html/home.html" class="cta">home</a></li>
+            <li><a href="/html/browse.html" class="cta">browse</a></li>
+            <li><a href="/html/upload.html" class="cta">upload</a></li>
+            <li><a href="/html/profile.html" class="cta">profile</a></li>
+            <li><a href="#" class="cta">contact</a></li>
+            <li><a href="#" class="cta">about us</a></li>
+            <li><a href="/html/sign_up.html" class="cta">sign-up</a></li>
+            <li><a href="/html/dev.html" class="cta">dev</a></li>
           </ul>
         </nav>
       </section>
@@ -262,7 +266,7 @@
           <form action="#" method="POST">
             <fieldset>
               <legend>payment method</legend>
-              <textarea name="adress" id="adress" class="adress" cols="0" rows="2" value="sesam stasjon 0145 lørenskog" required ></textarea>
+              <textarea name="adress" id="adress" class="adress" cols="0" rows="2" required >sesam stasjon 0145 lørenskog</textarea>
               <input type="text" name= "cvc" id="cvc" class="cvc" value="654" maxlength="3" minlength="3"
               required >
               <input type="text" name="card_num" id="card_num" class="card_num" value="1450 1540 **** ****" maxlength="16" minlength="16" required>

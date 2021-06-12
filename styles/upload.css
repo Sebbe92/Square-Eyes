@@ -101,8 +101,6 @@ fieldset {
 }
 .about_container textarea {
   width: 85%;
-  resize: none;
-  font-size: 1.5em;
 }
 .thumbnail_container {
   height: 150px;

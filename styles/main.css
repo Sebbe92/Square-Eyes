@@ -36,7 +36,10 @@ header .cta {
   color: black;
   white-space: nowrap;
 }
-p {
+p,
+input,
+textarea,
+label {
   font-family: "alternate-gothic-no-1-d", sans-serif;
   font-style: 200;
   font-weight: 300;
@@ -72,6 +75,10 @@ ul {
 input {
   font-size: 1.5em;
   height: 30px;
+}
+textarea {
+  resize: none;
+  font-size: 1.5em;
 }
 input[type="file"] {
   width: 100%;
@@ -201,7 +208,6 @@ header .right a {
   border: solid black 2px;
   margin-bottom: 2px;
 }
-
 .menu_overlay li a {
   width: 100%;
   display: flex;

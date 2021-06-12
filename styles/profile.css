@@ -124,20 +124,25 @@ main {
   flex: 2;
 }
 .add_payment_method {
-  width: auto;
+  width: 80%;
+  min-height: 50px;
   border-radius: 0 70px 70px 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: white;
   margin-top: 40px;
 }
+.add_payment_method svg {
+  height: inherit;
+}
 .add_payment_method a {
   font-size: 1.5em;
-  margin: 0 30px 10px 10px;
+  margin: 0 30px 0 10px;
 }
 .payment_method {
   width: 80%;
+  max-width: 400px;
   height: 220px;
   border-radius: 40px;
   background-color: var(--widget-bg-color);
@@ -151,11 +156,20 @@ main {
 /*payment widget*/
 #cvc {
   width: 48px;
+  margin-right: auto;
 }
 #card_num {
-  width: 210px;
+  width: 200px;
 }
-.payment_method input {
+.payment_method legend {
+  display: none;
+}
+.payment_method fieldset {
+  border: none;
+  padding: 20px;
+}
+.payment_method input,
+.payment_method textarea {
   background-color: transparent;
   border: none;
 }
@@ -181,6 +195,12 @@ main {
   .profile_menu {
     margin-top: 0;
   }
+  .profile_payment {
+    align-items: center;
+  }
+  .add_payment_method {
+    border-radius: 50px;
+  }
 }
 @media screen and (max-width: 500px) {
   .profile_main {
@@ -197,5 +217,8 @@ main {
   .profile_payment {
     width: 100%;
     min-width: 300px;
+  }
+  .add_payment_method a {
+    font-size: 1em;
   }
 }
