@@ -63,6 +63,31 @@ video {
   display: flex;
 }
 /*upload form*/
+/*upload form-drag and drop*/
+#drag_n_drop {
+  color: transparent;
+}
+
+.drag_n_drop::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.file_container {
+  position: relative;
+}
+.drag_n_drop::after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  border: dashed black 3px;
+  content: "drag and drop \a or click here to add files";
+  color: black;
+  text-align: center;
+  padding-top: 45px;
+  vertical-align: middle;
+}
 fieldset {
   border: none;
 }

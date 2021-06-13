@@ -1,1 +1,12 @@
 @import url(/styles/main.css);
+.watch_main {
+  width: 65%;
+  min-width: 300px;
+  display: block;
+  background-color: var(--widget-bg-color);
+  padding: 10px;
+  margin: auto;
+}
+video {
+  width: 100%;
+}

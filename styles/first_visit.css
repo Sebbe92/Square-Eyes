@@ -13,8 +13,7 @@ video {
   margin: 20px 5px;
 }
 .btn {
-  background-color: #48bbff;
-  color: white;
+  background-color: var(--button-color);
   padding: 5px 20px;
   font-size: 4em;
   border-radius: 50px;
@@ -23,6 +22,7 @@ video {
 .btn_container {
   margin-bottom: 50px;
 }
+
 .about_se {
   width: 30%;
   margin: 20px auto;

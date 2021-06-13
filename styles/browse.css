@@ -86,6 +86,7 @@ video {
 .vid_overlay {
   display: none;
 }
+
 .vid_overlay .container {
   display: flex;
 }
