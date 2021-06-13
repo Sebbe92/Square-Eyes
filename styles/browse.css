@@ -1,14 +1,17 @@
 @import url(/styles/main.css);
 
 main {
-  display: flex;
+  display: block;
   justify-content: center;
 }
 .main_content {
   width: 90%;
   background-color: var(--widget-bg-color);
+  margin: 0 auto;
 }
-
+h1 {
+  background: var(--widget-bg-color);
+}
 .sort {
   background-color: var(--widget-bg-color);
   width: 100%;

@@ -1,5 +1,11 @@
 @import url(/styles/main.css);
 main {
+  display: block;
+}
+h1 {
+  background-color: var(--widget-bg-color);
+}
+.flex_container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -66,18 +72,13 @@ main input {
 }
 
 @media only screen and (max-width: 600px) {
-  legend {
-    font-size: 3em;
-  }
-  label {
-    font-size: 2em;
-  }
-  .temp_btn {
-    font-size: 2em;
-  }
   .maker,
   .viewer {
     width: 100%;
     margin: 0;
+  }
+
+  .cta {
+    font-size: 1.5em;
   }
 }
