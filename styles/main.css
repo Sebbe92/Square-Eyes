@@ -31,7 +31,7 @@ html {
 p,
 input,
 textarea {
-  font-family: "alternate-gothic-no-1-d", Helvetica, sans-serif sans-serif;
+  font-family: "alternate-gothic-no-1", "Helvetica", sans-serif;
   font-style: 200;
   font-weight: 300;
   font-size: 1.5em;
@@ -47,6 +47,9 @@ legend {
   font-weight: 400;
   font-size: 2.5em;
   text-transform: capitalize;
+}
+h1 {
+  font-size: 5em;
 }
 h4,
 h5 {
@@ -122,6 +125,12 @@ textarea {
   padding: 3px;
   text-align: center;
   border: 1px solid black;
+}
+.margin_top {
+  margin-top: 10px;
+}
+.margin_bottom {
+  margin-bottom: 10px;
 }
 
 /*HEADER*/
@@ -307,6 +316,9 @@ nav .cta:hover {
 }
 .btn:hover {
   background-color: var(--button-hover-color);
+}
+.hover_background:hover {
+  background-color: gray;
 }
 @media screen and (max-width: 1200px) {
   /*HEADER*/

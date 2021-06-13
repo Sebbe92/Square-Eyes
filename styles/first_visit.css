@@ -23,12 +23,15 @@ video {
   margin-bottom: 100px;
 }
 .btn_container {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
-.about_se {
-  width: 30%;
-  margin: 20px auto;
+.text_widget {
+  width: 70%;
+  background-color: var(--widget-bg-color);
+  text-align: left;
+  padding: 10px;
+  margin: 0 auto;
 }
 @media screen and (max-width: 500px) {
   .main_container {
