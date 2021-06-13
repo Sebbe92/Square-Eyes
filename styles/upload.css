@@ -158,4 +158,7 @@ fieldset {
     width: 99%;
     min-width: 0;
   }
+  .drag_n_drop::after {
+    content: "drag and drop \a or click here";
+  }
 }

@@ -130,7 +130,7 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: var(--widget-bg-color);
   margin-top: 40px;
 }
 .add_payment_method svg {
@@ -140,20 +140,24 @@ label {
   font-size: 1.5em;
   margin: 0 30px 0 10px;
 }
+
+/*payment widget*/
 .payment_method {
   width: 80%;
   max-width: 400px;
   height: 220px;
   border-radius: 40px;
   background-color: var(--widget-bg-color);
+  display: block;
+  text-align: center;
   padding: 20px;
   margin: 20px auto;
 }
 .payment_method input {
   width: 100%;
+  margin: 10px;
+  font-size: 1.5em;
 }
-
-/*payment widget*/
 #cvc {
   width: 48px;
   margin-right: auto;
@@ -209,7 +213,7 @@ label {
   }
   .profile_main .flex_container {
     flex-direction: column;
-    background-color: aqua;
+    font-size: 0.9em;
   }
   .flexcontainer .save_btn {
     margin: none;
@@ -220,5 +224,8 @@ label {
   }
   .add_payment_method a {
     font-size: 1em;
+  }
+  .add_payment_method {
+    margin: 0 auto;
   }
 }

@@ -16,17 +16,11 @@ main {
 fieldset {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   flex-wrap: wrap;
 }
-fieldset .left {
-  width: 40%;
-  min-width: 400px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
+
 fieldset .search_n_button {
   min-width: 400px;
   width: 60%;
@@ -58,6 +52,7 @@ main label {
   height: 50px;
   font-size: 1.5em;
   position: relative;
+  margin: 0;
 }
 .main_content button {
   margin-left: -20px;
@@ -128,8 +123,8 @@ h3 {
     width: 100%;
   }
   fieldset .search_n_button {
-    min-width: 150px;
     width: 100%;
+    min-width: 150px;
   }
   .sort {
     text-align: center;
