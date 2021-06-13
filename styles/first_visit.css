@@ -1,4 +1,7 @@
 @import url(/styles/main.css);
+.hamburger_label {
+  display: none;
+}
 main {
   align-items: center;
 }
