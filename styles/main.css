@@ -346,3 +346,11 @@ nav .cta:hover {
     font-size: 1.5em;
   }
 }
+@media screen and (max-width: 349px) {
+  .login_signup {
+    display: none;
+  }
+  .menu_overlay {
+    width: 100%;
+  }
+}

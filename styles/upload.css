@@ -1,9 +1,12 @@
 @import url(/styles/main.css);
 
-main {
+.main_container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+h1 {
+  background-color: var(--widget-bg-color);
 }
 .preview {
   width: 45%;
