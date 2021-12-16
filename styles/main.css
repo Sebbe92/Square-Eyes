@@ -16,12 +16,13 @@ body {
 /*GLOBAL-variables*/
 :root {
   --widget-bg-color: rgba(244, 249, 252, 0.981);
+  --bg-color: white;
   --button-hover-color: #009df8;
   --button-color: #48bbff;
   --header-bg-color: #f4f9fc;
 }
 html {
-  background-image: url(/img/pexels-nikita-belokhonov-5977360.jpg);
+  background: var(--bg-color);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -41,6 +42,7 @@ h1,
 h2,
 h3,
 label,
+.btn,
 legend {
   font-family: "komu-a", sans-serif;
   font-style: normal;
@@ -133,6 +135,17 @@ textarea {
   margin-bottom: 10px;
 }
 
+/*user alert */
+.user_alert {
+  background-color: white;
+  text-align: center;
+  position: absolute;
+  top: 20vh;
+  left: auto;
+  width: 100%;
+  height: 200px;
+  min-height: fit-content;
+}
 /*HEADER*/
 header {
   width: 100%;

@@ -191,55 +191,65 @@
   
   </header>
   <main>
-    <h1 class="center">sign-up</h1>
+    <div class="user_alert"><h2>welcome to squareeyes Sebastian</h2>
+    <p>thanks for signing up</p></div>
+    <h1 class="center" style="display: none">sign-up</h1>
     <div class="flex_container">
-    <section class="viewer">
+      
+    <section class="sign_up">
       <div class="sign_up_form">
-        <form action="#" method="POST">
+        <div class="switch_container">
+        <button id="viewer_switch" class= "switch" ><h3>Viewer Account</h3></button>
+        <button id="studio_switch" class= "switch"><h3>Studio Account</h3></button>
+        </div>
+        <form action="#" id="viewer_form">
           <fieldset>
-            <legend> Make a viewer account</legend>
-          <label for="name">name</label>
-          <input type="name" name="name" id="name" required>
-          <label for="email">email</label>
-          <input type="email" name="email" id="email" required>
-          <label for="password">password</label>
-          <input type="password" name="password" id="password" required>
-          <label for="repeat">repeat password</label>
-          <input type="password" name="repeat" id="repeat_password" required>
-          <input type="submit" value="create account" class="btn">
+            <legend> Sign-Up</legend>
+          <label for="viewer_name">name</label>
+          <input type="name" name="viewer_name" id="viewer_name" data-account="viewer">
+          <h4 id="viewer_name_error"class="error"></h4>
+          <label for="viewer_email">email</label>
+          <input type="email" name="viewer_email" id="viewer_email" class="email">
+          <h4 id="viewer_email_error"class="error"></h4>
+          <label for="viewer_password">password</label>
+          <input type="password" name="viewer_password" id="viewer_password" required
+          data-account="viewer">
+          <h4 id="viewer_password_error"class="error"></h4>
+          <label for="viewer_repeat">repeat password</label>
+          <input type="password" name="viewer_repeat" id="viewer_repeat">
+          <h4 id="viewer_repeat_error"class="error"></h4>
+          <input type="submit" value="create account" 
+          id="viewer_submit_btn" class="btn">
         
         </fieldset>
         </form>
-        <div class="center">
-          <a href="/html/home.html" class="temp_btn cta">create account</a>
-         </div>
-      </div>
-
-    </section>
-    <section class="maker">
-      <div class="sign_up_form">
-        <form action="/html/home.html">
+        <form action="#" id="studio_form">
           <fieldset>
-            <legend> create a studio account</legend>
+            <legend> Create a studio account</legend>
           <label for="studio_name">studio name</label>
           <input type="name" name="studio_name" id="studio_name" required>
-          <label for="maker_email">email</label>
-          <input type="email" name="maker_email" id="maker_email" required>
-          <label for="maker_password">password</label>
-          <input type="password" name="maker_password" id="maker_password" required>
-          <label for=" maker_repeat-password">repeat password</label>
-          <input type="password" name="maker_repeat password" id="maker_repeat-password" required>
-          <input type="submit" value="create account" class="btn">
+          <h4 id="studio_name_error"class="error"></h4>
+          <label for="studio_email">email</label>
+          <input type="email" name="studio_email" id="studio_email" required>
+          <h4 id="studio_email_error"class="error"></h4>
+          <label for="studio_password">password</label>
+          <input type="password" name="studio_password" id="studio_password" required>
+          <h4 id="studio_password_error"class="error"></h4>
+          <label for="studio_repeat">repeat password</label>
+          <input type="password" name="studio_repeat" id="studio_repeat" required>
+          <h4 id="studio_repeat_error"class="error"></h4>
+          <input type="submit" 
+          id="studio_submit_btn" class="btn" value="create account" class="btn">
         </fieldset>
         </form>
-        <div class="center">
-         <a href="/html/home.html" class="temp_btn cta">create account</a>
-        </div>
       </div>
 
     </section>
   </div>
   </main>
-  
+  <script src="/script/tools/querySelectors.js"></script>
+  <script src="/script/tools/variables.js"></script>
+  <script src="/script/tools/functions.js"></script>
+  <script src="../script/signUp.js"></script>
 </body>
 </html>
