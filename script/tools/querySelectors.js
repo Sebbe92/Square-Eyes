@@ -1,23 +1,23 @@
 const studio = {};
 studio.name = document.querySelector("#studio_name");
-studio.nameError = document.querySelector("#studio_name_error");
+studio.name.error = document.querySelector("#studio_name_error");
 studio.email = document.querySelector("#studio_email");
-studio.emailError = document.querySelector("#studio_email_error");
+studio.email.error = document.querySelector("#studio_email_error");
 studio.pass = document.querySelector("#studio_password");
-studio.passError = document.querySelector("#studio_password_error");
+studio.pass.error = document.querySelector("#studio_password_error");
 studio.repeatPass = document.querySelector("#studio_repeat");
-studio.repeatPassError = document.querySelector("#studio_repeat_error");
+studio.repeatPass.error = document.querySelector("#studio_repeat_error");
 studio.submitBtn = document.querySelector("#studio_submit_btn");
 
 const viewer = {};
 viewer.name = document.querySelector("#viewer_name");
-viewer.nameError = document.querySelector("#viewer_name_error");
+viewer.name.error = document.querySelector("#viewer_name_error");
 viewer.email = document.querySelector("#viewer_email");
-viewer.emailError = document.querySelector("#viewer_email_error");
+viewer.email.error = document.querySelector("#viewer_email_error");
 viewer.pass = document.querySelector("#viewer_password");
-viewer.passError = document.querySelector("#viewer_password_error");
+viewer.pass.error = document.querySelector("#viewer_password_error");
 viewer.repeatPass = document.querySelector("#viewer_repeat");
-viewer.repeatPassError = document.querySelector("#viewer_repeat_error");
+viewer.repeatPass.error = document.querySelector("#viewer_repeat_error");
 viewer.submitBtn = document.querySelector("#viewer_submit_btn");
 
 const submitBtn = document.querySelectorAll(".temp_btn");
@@ -27,3 +27,8 @@ const allInputs = document.querySelectorAll("main input");
 const studioForm = document.querySelector("#studio_form");
 const viewerForm = document.querySelector("#viewer_form");
 const formContainer = document.querySelector(".sign_up");
+
+const userAlert = document.querySelector(".user_alert");
+const userAlertHeader = document.querySelector(".user_alert h2");
+const userAlertBody = document.querySelector(".user_alert p");
+const userAlertClose = document.querySelector("#close_btn");

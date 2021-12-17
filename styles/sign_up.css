@@ -76,8 +76,9 @@ main input {
   padding: 0px 10px;
 }
 .error {
-  color: red;
+  color: rgb(82, 1, 1);
   font-family: "komu-a", sans-serif;
+  font-size: 1.5em;
 }
 fieldset {
   width: 80%;

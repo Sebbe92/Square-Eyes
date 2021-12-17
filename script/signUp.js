@@ -2,19 +2,29 @@ studio.name.addEventListener("input", validateName);
 studio.email.addEventListener("input", validateEmail);
 studio.pass.addEventListener("input", validatePass);
 studio.repeatPass.addEventListener("input", validateRepeat);
+//when form is valid submit btn is enabled and console logs the content when clicked as well as running userMessage to display a success message to the user.
 studio.submitBtn.addEventListener("click", function (e) {
   e.preventDefault;
 
-  console.log(studio.name, studio.email, studio.pass);
+  console.log(studio.name.value, studio.email.value, studio.pass.value);
+  userMessage(
+    `Welcome to SquareEyes ${studio.name.value}`,
+    "You are ready to find a film and enjoy"
+  );
 });
 
 viewer.name.addEventListener("input", validateName);
 viewer.email.addEventListener("input", validateEmail);
 viewer.pass.addEventListener("input", validatePass);
 viewer.repeatPass.addEventListener("input", validateRepeat);
+//when form is valid submit btn is enabled and console logs the content when clicked as well as running userMessage to display a success message to the user.
 viewer.submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
   console.log(viewer.name.value, viewer.email.value, viewer.pass.value);
+  userMessage(
+    `Welcome to SquareEyes ${viewer.name.value}`,
+    `You are ready to find a film and enjoy`
+  );
 });
 
 studioswitch.addEventListener("click", function () {
