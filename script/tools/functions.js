@@ -8,6 +8,12 @@ function textBackground() {
 }
 textBackground();
 //
+
+function clearForm() {
+  allInputs.forEach((input) => {
+    input.innerHTML = "";
+  });
+}
 /* switches forms from studio to<or>from viewer also changes backgrounds to match form  */
 function switchWidget() {
   if (studioBtnPressed) {
@@ -33,6 +39,7 @@ function userMessage(
 }
 userAlertClose.addEventListener("click", function () {
   userAlert.style.display = "none";
+  location.href = "/html/browse.html";
 });
 //
 
@@ -97,33 +104,39 @@ if (this.dataset.account === "viewer") {
 }
 
 //check if password match
-let repeatTimeoutCheck = false;
+
 function validateRepeat() {
   errorContainer = this.error;
-  if (this.value === password) {
-    this.style.outline = "none";
-    this.style.borderColor = "green";
-    this.isValid = true;
-    clearTimeout(passTimeout);
-    passTimeoutCheck = false;
-    errorContainer.innerHTML = "";
-  } else {
-    this.style.outline = "auto";
-    this.style.borderColor = "black";
-    this.isValid = false;
-    if (!passTimeoutCheck) {
-      passTimeout = setTimeout(() => {
-        errorContainer.innerHTML = "Password do not match";
-      }, 2000);
-      passTimeoutCheck = true;
-    } else {
+  try {
+    if (this.value === password) {
+      this.style.outline = "none";
+      this.style.borderColor = "green";
+      this.isValid = true;
       clearTimeout(passTimeout);
-      passTimeout = setTimeout(() => {
-        errorContainer.innerHTML = "Password do not match";
-      }, 2000);
-      passTimeoutCheck = true;
+      passTimeoutCheck = false;
+      errorContainer.innerHTML = "";
+    } else {
+      this.style.outline = "auto";
+      this.style.borderColor = "black";
+      this.isValid = false;
+      if (!passTimeoutCheck) {
+        passTimeout = setTimeout(() => {
+          errorContainer.innerHTML = "Password do not match";
+        }, 2000);
+        passTimeoutCheck = true;
+      } else {
+        clearTimeout(passTimeout);
+        passTimeout = setTimeout(() => {}, 1000);
+        passTimeoutCheck = true;
+      }
     }
+  } catch (error) {
+    console.log(error);
   }
+  if (this.value === "") {
+    errorContainer.innerHTML = "";
+  }
+
   validateForm();
 }
 
@@ -137,43 +150,46 @@ function validateLength(minLen, input) {
   }
 }
 //validates password format atleast 8 in length and contains atleast one capital letter, one lower case letter, a number and a special character (@!?=£$€¤%&)
-let passTimeoutCheck = false;
+
 function validatePass() {
-  const errorContainer = this.error;
-  const regEx =
-    /(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@!?=£$€¤%&])[A-Za-z0-9@!?=£$€¤%&]{8,}/;
-  const patternMatches = regEx.test(this.value);
-  if (patternMatches) {
-    this.style.outline = "none";
-    this.style.borderColor = "green";
-    this.isValid = true;
-    clearTimeout(passTimeout);
-    passTimeoutCheck = false;
-    errorContainer.innerHTML = "";
-  } else {
-    this.style.outline = "none";
-    this.style.borderColor = "red";
-    this.isValid = false;
-    if (!passTimeoutCheck) {
-      passTimeout = setTimeout(() => {
-        errorContainer.innerHTML =
-          "Password must be atleast eigth(8) characters long and contain atleast one capitol letter, one lower case letter, one number and one special character(@!?=£$€¤%&)";
-      }, 2000);
-      passTimeoutCheck = true;
-    } else {
+  try {
+    const errorContainer = this.error;
+    const regEx =
+      /(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@!?=£$€¤%&])[A-Za-z0-9@!?=£$€¤%&]{8,}/;
+    const patternMatches = regEx.test(this.value);
+    if (patternMatches) {
+      this.style.outline = "none";
+      this.style.borderColor = "green";
+      this.isValid = true;
       clearTimeout(passTimeout);
-      passTimeout = setTimeout(() => {
-        errorContainer.innerHTML =
-          "Password must be atleast eigth(8) characters long and contain atleast one capitol letter, one lower case letter, one number and one special character(@!?=£$€¤%&)";
-      }, 2000);
-      passTimeoutCheck = true;
+      passTimeoutCheck = false;
+      errorContainer.innerHTML = "";
+    } else {
+      this.style.outline = "none";
+      this.style.borderColor = "red";
+      this.isValid = false;
+      if (!passTimeoutCheck) {
+        passTimeout = setTimeout(() => {
+          errorContainer.innerHTML =
+            "Password must be atleast eigth(8) characters long and contain atleast one capitol letter, one lower case letter, one number and one special character(@!?=£$€¤%&)";
+        }, 2000);
+        passTimeoutCheck = true;
+      } else {
+        clearTimeout(passTimeout);
+        passTimeout = setTimeout(() => {
+          errorContainer.innerHTML =
+            "Password must be atleast eigth(8) characters long and contain atleast one capitol letter, one lower case letter, one number and one special character(@!?=£$€¤%&)";
+        }, 2000);
+        passTimeoutCheck = true;
+      }
     }
-  }
+  } catch (error) {}
+
   password = this.value;
   validateForm();
 }
 // validates name uses validateLength to check the length and a regex to check that the name does not start with a number
-let nameTimeoutCheck = false;
+
 function validateName() {
   const errorContainer = this.error;
   const input = this.value;
@@ -213,7 +229,7 @@ function validateName() {
 }
 
 //validates Email format -->[A-Z,a-z,0-9,_]at(@)[A-Z,a-z,0-9,_] dot(.) [A-Za-z0-9_]<-(x2)
-let emailTimeoutCheck = false;
+
 function validateEmail() {
   const errorContainer = this.error;
   const regEx = /\w+@\w+\.+\w{2}/;
