@@ -42,3 +42,10 @@ viewerSwitch.addEventListener("click", function () {
     switchWidget();
   }
 });
+userAlertClose.addEventListener("click", function () {
+  userAlert.style.display = "none";
+  location.href = "/html/browse.html";
+});
+
+//sets a white background on input elements on input
+textBackground();

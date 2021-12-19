@@ -6,7 +6,7 @@ function textBackground() {
     });
   });
 }
-textBackground();
+
 //
 
 function clearForm() {
@@ -37,35 +37,6 @@ function userMessage(
   userAlertHeader.innerHTML = `${messageHead}`;
   userAlertBody.innerHTML = `${messageBody}`;
 }
-userAlertClose.addEventListener("click", function () {
-  userAlert.style.display = "none";
-  location.href = "/html/browse.html";
-});
-//
-
-//error display
-/* function inputError() {
-  const errorContainer = this.error;
-  console.log(errorContainer);
-  if (!this.isValid) {
-    nameTimeout = setTimeout(() => {
-      console.log(this);
-      this.error.innerHTML = "invalid name";
-    }, 1000);
-  } else {
-    this.error.innerHTML = "";
-    clearTimeout(nameTimeout);
-  } 
-
-   console.log(location);
-  if (location.innerHTML === "") {
-    setTimeout(() => {
-      location.innerHTML = `${message}`;
-    }, 500);
-  } else {
-    window.clearTimeout;
-  } 
-}*/
 
 //validates sign-up forms both viewer and studio
 function validateForm() {
@@ -126,7 +97,9 @@ function validateRepeat() {
         passTimeoutCheck = true;
       } else {
         clearTimeout(passTimeout);
-        passTimeout = setTimeout(() => {}, 1000);
+        passTimeout = setTimeout(() => {
+          errorContainer.innerHTML = "Password do not match";
+        }, 1000);
         passTimeoutCheck = true;
       }
     }
@@ -184,8 +157,24 @@ function validatePass() {
       }
     }
   } catch (error) {}
-
   password = this.value;
+  if (password === studio.repeatPass.value) {
+    console.log("match");
+    studio.repeatPass.style.outline = "none";
+    studio.repeatPass.isValid = true;
+    studio.repeatPass.style.borderColor = "green";
+  } else if (password === viewer.repeatPass.value) {
+    viewer.repeatPass.style.outline = "none";
+    viewer.repeatPass.isValid = true;
+    viewer.repeatPass.style.borderColor = "green";
+  } else {
+    viewer.repeatPass.style.outline = "none";
+    viewer.repeatPass.isValid = false;
+    viewer.repeatPass.style.borderColor = "red";
+    studio.repeatPass.style.outline = "none";
+    studio.repeatPass.isValid = false;
+    studio.repeatPass.style.borderColor = "red";
+  }
   validateForm();
 }
 // validates name uses validateLength to check the length and a regex to check that the name does not start with a number
@@ -277,3 +266,29 @@ function validateEmail() {
     this.style.borderColor = "red";
   }
 } */
+
+//insert videos
+function insertVideo() {
+  for (let i = 0; i < 10; i++) {
+    console.log("12312");
+    output.innerHTML += `<div class="video_element">
+  <video src="/videos/video.mp4" type="video/mp4" id=${i} class = "video" >sorry looks like something went wrong</video><a href="/html/movie_id_movie.html"> <div class="vid_overlay"><h2>feel the magic</h2></a>
+    <div class="container">
+      <h3>neon film studio</h3>
+      
+  </div></a>
+</div>`;
+  }
+  let i = 0;
+  const videos = document.querySelectorAll(".video");
+  videos.forEach((video) => {
+    console.log("works");
+    video.addEventListener("mouseenter", function () {
+      videos.forEach((video) => {
+        video.pause();
+      });
+      video.play();
+    });
+    i++;
+  });
+}

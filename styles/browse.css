@@ -74,7 +74,7 @@ video {
   width: 400px;
   position: relative;
 }
-.video_element:hover > .vid_overlay {
+.vid_overlay {
   width: 100%;
   background-color: rgba(1, 1, 1, 0.5);
   padding: 5px;
@@ -85,8 +85,8 @@ video {
   left: 0;
   z-index: 1;
 }
-.vid_overlay {
-  display: none;
+.vid_overlay:hover {
+  background-color: black;
 }
 
 .vid_overlay .container {
