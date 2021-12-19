@@ -270,7 +270,6 @@ function validateEmail() {
 //insert videos
 function insertVideo() {
   for (let i = 0; i < 10; i++) {
-    console.log("12312");
     output.innerHTML += `<a href="/html/movie_id_movie.html" class="video_element">
   <video src="/videos/video.mp4" type="video/mp4" id=${i} class = "video" muted >sorry looks like something went wrong</video> <div class="vid_overlay"><h2>feel the magic</h2>
     <div class="container">
@@ -282,7 +281,6 @@ function insertVideo() {
   let i = 0;
   const videos = document.querySelectorAll(".video");
   videos.forEach((video) => {
-    console.log("works");
     video.addEventListener("mouseenter", function () {
       videos.forEach((video) => {
         video.pause();

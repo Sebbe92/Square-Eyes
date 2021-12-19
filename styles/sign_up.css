@@ -53,6 +53,7 @@ main input {
   border-radius: 20px 0 0 20px;
   background-image: url(/img/pexels-rakicevic-nenad-1274260.jpg);
   background-size: cover;
+  color: white;
 }
 .switch {
   background-color: rgba(254, 222, 255, 0.557);
