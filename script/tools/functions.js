@@ -271,13 +271,13 @@ function validateEmail() {
 function insertVideo() {
   for (let i = 0; i < 10; i++) {
     console.log("12312");
-    output.innerHTML += `<div class="video_element">
-  <video src="/videos/video.mp4" type="video/mp4" id=${i} class = "video" >sorry looks like something went wrong</video><a href="/html/movie_id_movie.html"> <div class="vid_overlay"><h2>feel the magic</h2></a>
+    output.innerHTML += `<a href="/html/movie_id_movie.html" class="video_element">
+  <video src="/videos/video.mp4" type="video/mp4" id=${i} class = "video" muted >sorry looks like something went wrong</video> <div class="vid_overlay"><h2>feel the magic</h2>
     <div class="container">
       <h3>neon film studio</h3>
-      
-  </div></a>
-</div>`;
+  </div>
+  </div>
+</a>`;
   }
   let i = 0;
   const videos = document.querySelectorAll(".video");

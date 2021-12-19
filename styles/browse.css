@@ -68,7 +68,6 @@ select {
 }
 video {
   width: 100%;
-  position: relative;
 }
 .video_element {
   width: 400px;
@@ -102,9 +101,6 @@ h3 {
   font-size: 1em;
 }
 @media screen and (max-width: 1200px) {
-  .video_element:hover > .vid_overlay {
-    display: none;
-  }
   .vid_overlay {
     width: 100%;
     background-color: rgba(1, 1, 1, 0.5);
