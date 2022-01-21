@@ -35,7 +35,7 @@ textarea {
   font-family: "alternate-gothic-no-1", "Helvetica", sans-serif;
   font-style: 200;
   font-weight: 300;
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-transform: capitalize;
 }
 h1,
@@ -109,6 +109,12 @@ textarea {
 .left {
   margin-right: auto;
   width: 100%;
+}
+.padding_10 {
+  padding: 10px;
+}
+.margin_10 {
+  margin: 10px;
 }
 .rounded_corners {
   border-radius: 30px;

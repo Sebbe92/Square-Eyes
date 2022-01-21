@@ -1,3 +1,18 @@
+//Home page
+const featuredContentContainer = document.querySelector("#featured");
+const featuredTitle = document.querySelector("#featured__title");
+const featuredDescription = document.querySelector(
+  "#featured__short_description"
+);
+// browse--sort
+const sortByNameBtn = document.querySelector("#a-z");
+const sortByPriceBtn = document.querySelector("#price");
+const genreSelector = document.querySelector("#genre");
+//film spesific
+const filmSpesificContainer = document.querySelector(
+  "#film_spesific_container"
+);
+
 //studio form
 const studio = {};
 studio.name = document.querySelector("#studio_name");

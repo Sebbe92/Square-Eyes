@@ -1,3 +1,18 @@
+//LINKS
+const allFilms =
+  "https://portabooth.digital/square-eyes/wp-json/wc/store/products";
+const featuredFilmsUrl =
+  "https://portabooth.digital/square-eyes/wp-json/wc/store/products/tags";
+const spesificFilm =
+  "https://portabooth.digital/square-eyes/wp-json/wc/store/products/id?id=";
+
+//featured film home page
+let numOfFeatured = 0;
+
+//browse
+let listOfFilms = [];
+let filteredFilms = [];
+
 //form validation | Sign-up
 let password = "";
 const nameMinLen = 2;

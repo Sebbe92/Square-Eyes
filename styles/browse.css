@@ -66,40 +66,26 @@ select {
   flex-wrap: wrap;
   justify-content: center;
 }
-video {
-  width: 100%;
+.film_container:nth-child(odd) {
+  background-color: rgb(244, 244, 244);
 }
-.video_element {
-  width: 400px;
-  position: relative;
+.film_container:nth-child(even) {
+  background-color: rgb(194, 194, 194);
 }
-.vid_overlay {
-  width: 100%;
-  background-color: rgba(1, 1, 1, 0.5);
-  padding: 5px;
-  margin-bottom: 5px;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
+.film__img {
+  max-width: 200px;
+  object-fit: cover;
 }
-.vid_overlay:hover {
-  background-color: black;
-}
-
-.vid_overlay .container {
+.film_container {
   display: flex;
+  max-width: 450px;
+  height: fit-content;
+  max-height: 300px;
+  margin: 25px;
+  overflow: hidden;
+  background-color: aliceblue;
 }
 
-h2,
-h3 {
-  color: white;
-  font-size: 2em;
-}
-h3 {
-  font-size: 1em;
-}
 @media screen and (max-width: 1200px) {
   .vid_overlay {
     width: 100%;

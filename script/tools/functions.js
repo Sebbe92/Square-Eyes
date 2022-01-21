@@ -7,6 +7,119 @@ function textBackground() {
   });
 }
 
+//get querystring
+function getID() {
+  const queryString = document.location.search;
+  const params = new URLSearchParams(queryString);
+  const id = parseInt(params.get("id"));
+  return id;
+}
+
+//api call to wordpress rest api
+async function apiCall(url, params = "") {
+  try {
+    const response = await fetch(`${url}${params}`);
+    const results = await response.json();
+    return results;
+  } catch (error) {
+    console.log(error);
+  }
+}
+apiCall(allFilms).then(function (results) {
+  listOfFilms = results;
+});
+//browse films
+function insertFilms(films) {
+  output.innerHTML = "";
+  try {
+    for (i = 0; i < films.length; i++) {
+      const film = films[i];
+      output.innerHTML += `<a href="/html/filmSpesific.html?id=${film.id}"class="film_container">
+      <img class="film__img" src="${film.images[0].src}" alt="${film.images[0].alt}">
+      <div class="padding_10"><h2 class="film__title">${film.name}</h2>
+      <p class="film__price margin_10">${film.prices.price} ${film.prices.currency_code}</p>
+      <p class="film__description">${film.short_description}</p></div>
+    </a>`;
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+function insertFilm(listOfFilms) {
+  const id = getID();
+  const film = listOfFilms.filter(function (item) {
+    console.log(item.id, id);
+    return item.id === id;
+  })[0];
+  console.log(film);
+  filmSpesificContainer.innerHTML = `<img class="film__img" src="${film.images[0].src}" alt="${film.images[0].alt}">
+  <div class="padding_10"><h2 class="film__title">${film.name}</h2>
+  <p class="film__price margin_10">${film.prices.price} ${film.prices.currency_code}</p>
+  <p class="film__description">${film.short_description}</p></div>`;
+}
+//sort
+console.log(apiCall(spesificFilm, id));
+function sortFilmsByName(listOfFilms) {
+  listOfFilms.sort(function (a, b) {
+    if (a.name > b.name) {
+      return 1;
+    } else if (a.name < b.name) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
+  insertFilms(listOfFilms);
+}
+function sortFilmsByPrice(listOfFilms) {
+  const sortedList = listOfFilms.sort(function (a, b) {
+    return a.prices.price - b.prices.price;
+  });
+  insertFilms(sortedList);
+}
+function checkGenre(film) {
+  for (let i = 0; i < film.categories.length; i++) {
+    if (film.categories[i].name === genreSelector.value) {
+      return true;
+    }
+  }
+}
+function filterGenre(listOfFilms) {
+  if (genreSelector.value === "genre") {
+    filteredFilms = listOfFilms;
+    insertFilms(filteredFilms);
+    return;
+  } else {
+    filteredFilms = listOfFilms.filter(checkGenre);
+    insertFilms(filteredFilms);
+  }
+}
+//featured film display
+function checkTag(film) {
+  console.log(film);
+  if (film.tags[0]) {
+    if (film.tags[0].name === "Featured") {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+}
+function featuredFilm(listOfFilms) {
+  console.log(listOfFilms);
+  const featuredFilms = listOfFilms.filter(checkTag);
+  const numOfFeatured = featuredFilms.length;
+  const currentlyFeatured = Math.floor(Math.random() * numOfFeatured);
+  console.log(currentlyFeatured, featuredFilms);
+  const featuredFilm = featuredFilms[currentlyFeatured];
+  console.log(featuredFilm);
+  featuredContentContainer.style.backgroundImage = `url(${featuredFilm.images[0].src})`;
+  featuredTitle.innerHTML = `${featuredFilm.name}`;
+  featuredDescription.innerHTML = `${featuredFilm.short_description}`;
+}
+
 //
 
 function clearForm() {
@@ -268,7 +381,7 @@ function validateEmail() {
 } */
 
 //insert videos
-function insertVideo() {
+/* function insertVideo() {
   for (let i = 0; i < 10; i++) {
     output.innerHTML += `<a href="/html/movie_id_movie.html" class="video_element">
   <video src="/videos/video.mp4" type="video/mp4" id=${i} class = "video" muted >sorry looks like something went wrong</video> <div class="vid_overlay"><h2>feel the magic</h2>
@@ -289,4 +402,4 @@ function insertVideo() {
     });
     i++;
   });
-}
+} */

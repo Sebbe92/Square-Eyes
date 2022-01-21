@@ -198,17 +198,22 @@
         <form action="#" method="GET">
           <fieldset>
               <label for="a-z" class="hover_background">a-z</label>
-              <input type="radio" name="sort" id="a-z" class="hide">
-              <label for="views" class="hover_background">views</label>
-              <input type="radio" name="sort" id="views" class="hide">
+              <input type="button" name="sort" id="a-z" class="hide">
+              <label for="price" class="hover_background">price</label>
+              <input type="radio" name="sort" id="price" class="hide">
               <label for="recent" class="hover_background">recent</label>
               <input type="radio" name="sort" id="recent" class="hide">
               <label for="rating" class="hover_background">rating</label>
               <input type="radio" name="sort" id="rating" class="hide">
+              <label for="genre">genre</label>
               <select name="genre" id="genre">
-              <option value="genre">genre</option>
-              <option value="horror">horror</option>
-              <option value="comedy">comedy</option>
+              <option value="genre">All</option>
+              <option value="Horror">Horror</option>
+              <option value="Comedy">Comedy</option>
+              <option value="Action">Action</option>
+              <option value="Drama">Drama</option>
+              <option value="Sci_Fi">Sci-Fi</option>
+              <option value="Thriller">Thriller</option>
               </select>
             
               <div class="search_n_button">
@@ -233,6 +238,7 @@
       </section>
     </section>
   </main>
+  <script src="/script/tools/variables.js"></script>
   <script src="/script/tools/querySelectors.js"></script>
   <script src="/script/tools/functions.js"></script>
   <script src="/script/browse.js"></script>
