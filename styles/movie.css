@@ -1,4 +1,5 @@
 @import url(/styles/main.css);
+
 #film_spesific_container {
   position: relative;
   width: 100%;
@@ -27,12 +28,42 @@
   max-width: 50%;
   min-width: 225px;
 }
+#similar_container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.similar_container__content_container img {
+  max-width: 50%;
+  object-fit: cover;
+}
+.similar_container__content_container {
+  display: flex;
+  max-width: 450px;
+  height: fit-content;
+  margin: 25px;
+  overflow: hidden;
+  border: 1px solid black;
+}
+.similar_container__content_container:hover {
+  border: black;
+  background-color: white;
+}
+.similar_container__content_container:visited {
+  border: 1px black;
+}
 
 @media screen and (max-width: 900px) {
-  #film_spesific_container img {
+  #film_spesific_container img,
+  .similar_container__content_container img {
     max-width: 100%;
   }
   .film_info_container {
     max-width: 100%;
+  }
+  .similar_container__content_container {
+    flex-wrap: wrap;
   }
 }

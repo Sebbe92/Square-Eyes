@@ -7,6 +7,8 @@ const featuredTitle = document.querySelector("#featured__title");
 const featuredDescription = document.querySelector(
   "#featured__short_description"
 );
+const postsContainer = document.querySelector("#posts_container");
+
 // browse--sort
 const sortByNameBtn = document.querySelector("#a-z");
 const sortByPriceBtn = document.querySelector("#price");
@@ -16,6 +18,7 @@ const filmSpesificContainer = document.querySelector(
   "#film_spesific_container"
 );
 const rentBtn = document.querySelector(".rent_now");
+const similarContainer = document.querySelector("#similar_container");
 
 //studio form
 const studio = {};

@@ -48,7 +48,6 @@ function insertFilms(films) {
 function insertFilm(listOfFilms) {
   const id = getID();
   const film = listOfFilms.filter(function (item) {
-    console.log(item.id, id);
     return item.id === id;
   })[0];
   const categories = film.categories;
@@ -57,12 +56,33 @@ function insertFilm(listOfFilms) {
   <div class="film_info_container padding_10"><div><h2 class="film__title">${film.name}</h2>
   <p class="film__price margin_10">${film.prices.price} ${film.prices.currency_code}</p></div>
   <div id="categories_container"></div>
-  <p class="film__description">${film.description}</p><button id="rent_film">Rent it Now<button></div>
+  <p class="film__description">${film.description}</p><button id="rent_film">Rent it Now</button></div>
   `;
   const categoriesContainer = document.querySelector("#categories_container");
   for (let i = 0; i <= categories.length; i++) {
-    categoriesContainer.innerHTML += `<p>${categories[i].name}</p>`;
+    if (categories[i]) {
+      categoriesContainer.innerHTML += `<p>${categories[i].name}</p>`;
+    }
   }
+  insertSimilarFilms(categories);
+}
+function matchCategories(categoriesToMatch, categories) {
+  if (categoriesToMatch[0].name === categories[0].name) {
+    return true;
+  }
+}
+function insertSimilarFilms(categories) {
+  listOfFilms.forEach((film) => {
+    const categoriesToMatch = film.categories;
+    if (matchCategories(categoriesToMatch, categories)) {
+      similarContainer.innerHTML += `<div class="similar_container__content_container"><img class="film__img" src="${film.images[0].src}" alt="${film.images[0].alt}">
+      <div class="film_info_container padding_10"><div><h2 class="film__title">${film.name}</h2>
+      <p class="film__price margin_10">${film.prices.price} ${film.prices.currency_code}</p></div>
+      <div id="categories_container"></div>
+      <p class="film__description">${film.short_description}</p><button id="rent_film">Rent it Now<button></div></div>
+      `;
+    }
+  });
 }
 
 //sort

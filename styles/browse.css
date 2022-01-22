@@ -77,7 +77,7 @@ select {
   height: fit-content;
   margin: 25px;
   overflow: hidden;
-  border: 1px solid var(--widget-bg-color);
+  border: 1px solid black;
 }
 .film_container:hover {
   border: black;
@@ -115,5 +115,8 @@ select {
     flex-wrap: wrap;
     max-width: 100%;
     height: fit-content;
+  }
+  .film__img {
+    max-width: 100%;
   }
 }
