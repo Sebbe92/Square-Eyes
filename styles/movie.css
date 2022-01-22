@@ -1,12 +1,38 @@
 @import url(/styles/main.css);
-.watch_main {
-  width: 65%;
+#film_spesific_container {
+  position: relative;
+  width: 100%;
   min-width: 300px;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   background-color: var(--widget-bg-color);
   padding: 10px;
   margin: auto;
 }
-video {
-  width: 100%;
+#film_spesific_container img {
+  min-width: 225px;
+  max-width: 50%;
+  height: fit-content;
+  max-height: 70vh;
+}
+
+#rent_film {
+  width: 200px;
+  height: 75px;
+}
+.film_info_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 50%;
+  min-width: 225px;
+}
+
+@media screen and (max-width: 900px) {
+  #film_spesific_container img {
+    max-width: 100%;
+  }
+  .film_info_container {
+    max-width: 100%;
+  }
 }

@@ -13,7 +13,7 @@
   overflow: hidden;
   background-color: rgb(205, 204, 204);
 }
-#featured button {
+#featured .nav_btn {
   font-size: 2em;
   position: absolute;
   width: 50px;
@@ -36,6 +36,14 @@
 .previus_btn {
   left: 0;
   transform: rotate(90deg);
+}
+.watch_now {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
 }
 #featured__title {
   position: absolute;

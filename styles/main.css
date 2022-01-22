@@ -16,7 +16,7 @@ body {
 /*GLOBAL-variables*/
 :root {
   --widget-bg-color: rgba(244, 249, 252, 0.981);
-  --bg-color: rgb(230, 230, 230);
+  --bg-color: rgb(41, 41, 41);
   --button-hover-color: #009df8;
   --button-color: #48bbff;
   --header-bg-color: #f4f9fc;
@@ -59,8 +59,13 @@ h5 {
   font-weight: 200;
   text-transform: capitalize;
 }
+
 a {
+  color: black;
   text-decoration: none;
+}
+a:visited h2 {
+  text-decoration: underline !important;
 }
 ul {
   list-style-type: none;

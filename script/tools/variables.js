@@ -3,8 +3,6 @@ const allFilms =
   "https://portabooth.digital/square-eyes/wp-json/wc/store/products";
 const featuredFilmsUrl =
   "https://portabooth.digital/square-eyes/wp-json/wc/store/products/tags";
-const spesificFilm =
-  "https://portabooth.digital/square-eyes/wp-json/wc/store/products/id?id=";
 
 //featured film home page
 let numOfFeatured = 0;

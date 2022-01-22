@@ -1,3 +1,6 @@
+//ALL
+const title = document.querySelector("title");
+
 //Home page
 const featuredContentContainer = document.querySelector("#featured");
 const featuredTitle = document.querySelector("#featured__title");
@@ -12,6 +15,7 @@ const genreSelector = document.querySelector("#genre");
 const filmSpesificContainer = document.querySelector(
   "#film_spesific_container"
 );
+const rentBtn = document.querySelector(".rent_now");
 
 //studio form
 const studio = {};

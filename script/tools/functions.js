@@ -36,7 +36,7 @@ function insertFilms(films) {
       const film = films[i];
       output.innerHTML += `<a href="/html/filmSpesific.html?id=${film.id}"class="film_container">
       <img class="film__img" src="${film.images[0].src}" alt="${film.images[0].alt}">
-      <div class="padding_10"><h2 class="film__title">${film.name}</h2>
+      <div class="film_info_container padding_10"><h2 class="film__title">${film.name}</h2>
       <p class="film__price margin_10">${film.prices.price} ${film.prices.currency_code}</p>
       <p class="film__description">${film.short_description}</p></div>
     </a>`;
@@ -51,14 +51,22 @@ function insertFilm(listOfFilms) {
     console.log(item.id, id);
     return item.id === id;
   })[0];
-  console.log(film);
+  const categories = film.categories;
+  title.innerHTML = `${film.name}|SqareEyes`;
   filmSpesificContainer.innerHTML = `<img class="film__img" src="${film.images[0].src}" alt="${film.images[0].alt}">
-  <div class="padding_10"><h2 class="film__title">${film.name}</h2>
-  <p class="film__price margin_10">${film.prices.price} ${film.prices.currency_code}</p>
-  <p class="film__description">${film.short_description}</p></div>`;
+  <div class="film_info_container padding_10"><div><h2 class="film__title">${film.name}</h2>
+  <p class="film__price margin_10">${film.prices.price} ${film.prices.currency_code}</p></div>
+  <div id="categories_container"></div>
+  <p class="film__description">${film.description}</p><button id="rent_film">Rent it Now<button></div>
+  `;
+  const categoriesContainer = document.querySelector("#categories_container");
+  for (let i = 0; i <= categories.length; i++) {
+    categoriesContainer.innerHTML += `<p>${categories[i].name}</p>`;
+  }
 }
+
 //sort
-console.log(apiCall(spesificFilm, id));
+
 function sortFilmsByName(listOfFilms) {
   listOfFilms.sort(function (a, b) {
     if (a.name > b.name) {
