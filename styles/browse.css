@@ -59,6 +59,9 @@ select {
   margin-left: -25px;
   z-index: 5;
 }
+#search_btn:hover svg {
+  width: 55px;
+}
 /*output*/
 .output {
   display: flex;

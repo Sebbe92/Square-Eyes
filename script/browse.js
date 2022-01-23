@@ -16,3 +16,8 @@ sortByPriceBtn.addEventListener("click", function () {
 genreSelector.addEventListener("change", function () {
   filterGenre(listOfFilms);
 });
+
+searchBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  searchFilm();
+});

@@ -13,6 +13,10 @@ const postsContainer = document.querySelector("#posts_container");
 const sortByNameBtn = document.querySelector("#a-z");
 const sortByPriceBtn = document.querySelector("#price");
 const genreSelector = document.querySelector("#genre");
+const searchField = document.querySelector("#search_field");
+
+const searchBtn = document.querySelector("#search_btn");
+
 //film spesific
 const filmSpesificContainer = document.querySelector(
   "#film_spesific_container"

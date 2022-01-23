@@ -28,23 +28,8 @@ async function apiCall(url, params = "") {
 apiCall(allFilms).then(function (results) {
   listOfFilms = results;
 });
-//browse films
-function insertFilms(films) {
-  output.innerHTML = "";
-  try {
-    for (i = 0; i < films.length; i++) {
-      const film = films[i];
-      output.innerHTML += `<a href="/html/filmSpesific.html?id=${film.id}"class="film_container">
-      <img class="film__img" src="${film.images[0].src}" alt="${film.images[0].alt}">
-      <div class="film_info_container padding_10"><h2 class="film__title">${film.name}</h2>
-      <p class="film__price margin_10">${film.prices.price} ${film.prices.currency_code}</p>
-      <p class="film__description">${film.short_description}</p></div>
-    </a>`;
-    }
-  } catch (error) {
-    console.log(error);
-  }
-}
+
+//film spesific
 function insertFilm(listOfFilms) {
   const id = getID();
   const film = listOfFilms.filter(function (item) {
@@ -84,7 +69,23 @@ function insertSimilarFilms(categories) {
     }
   });
 }
-
+//browse films
+function insertFilms(films) {
+  output.innerHTML = "";
+  try {
+    for (i = 0; i < films.length; i++) {
+      const film = films[i];
+      output.innerHTML += `<a href="/html/filmSpesific.html?id=${film.id}"class="film_container">
+      <img class="film__img" src="${film.images[0].src}" alt="${film.images[0].alt}">
+      <div class="film_info_container padding_10"><h2 class="film__title">${film.name}</h2>
+      <p class="film__price margin_10">${film.prices.price} ${film.prices.currency_code}</p>
+      <p class="film__description">${film.short_description}</p></div>
+    </a>`;
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
 //sort
 
 function sortFilmsByName(listOfFilms) {
@@ -121,6 +122,20 @@ function filterGenre(listOfFilms) {
     filteredFilms = listOfFilms.filter(checkGenre);
     insertFilms(filteredFilms);
   }
+}
+function checkSearch(film) {
+  const input = searchField.value.toLowerCase();
+  const filmName = film.name.toLowerCase();
+  return filmName === input;
+}
+function searchFilm() {
+  if (!searchField.value) {
+    insertFilms(listOfFilms);
+    return;
+  }
+  const filteredList = listOfFilms.filter(checkSearch);
+  insertFilms(filteredList);
+  searchField.value = "";
 }
 //featured film display
 function checkTag(film) {
