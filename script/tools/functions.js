@@ -60,11 +60,11 @@ function insertSimilarFilms(categories) {
   listOfFilms.forEach((film) => {
     const categoriesToMatch = film.categories;
     if (matchCategories(categoriesToMatch, categories)) {
-      similarContainer.innerHTML += `<div class="similar_container__content_container"><img class="film__img" src="${film.images[0].src}" alt="${film.images[0].alt}">
+      similarContainer.innerHTML += `<a href="/html/filmSpesific.html?id=${film.id}" class="similar_container__content_container"><img class="film__img" src="${film.images[0].src}" alt="${film.images[0].alt}">
       <div class="film_info_container padding_10"><div><h2 class="film__title">${film.name}</h2>
       <p class="film__price margin_10">${film.prices.price} ${film.prices.currency_code}</p></div>
       <div id="categories_container"></div>
-      <p class="film__description">${film.short_description}</p><button id="rent_film">Rent it Now<button></div></div>
+      <p class="film__description">${film.short_description}</p><button id="rent_film">Rent it Now<button></div></a>
       `;
     }
   });
