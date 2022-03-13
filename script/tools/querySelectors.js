@@ -2,13 +2,18 @@
 const title = document.querySelector("title");
 
 //Home page
-const featuredContentContainer = document.querySelector("#featured");
+const featuredContentContainer = document.querySelector("#featured_container");
 const featuredTitle = document.querySelector("#featured__title");
 const featuredDescription = document.querySelector(
   "#featured__short_description"
 );
-const postsContainer = document.querySelector("#posts_container");
+const latestContainer = document.querySelector("#latest_container");
+const latestNextBtn = document.querySelector("#latest_next_btn");
+const latestPrevBtn = document.querySelector("#latest_prev_btn");
 
+const postsContainer = document.querySelector("#posts_container");
+const featuredNextBtn = document.querySelector("#featured_next_btn");
+const featuredPrevBtn = document.querySelector("#featured_prev_btn");
 // browse--sort
 const sortByNameBtn = document.querySelector("#a-z");
 const sortByPriceBtn = document.querySelector("#price");

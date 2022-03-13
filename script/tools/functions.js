@@ -446,3 +446,10 @@ function validateEmail() {
     i++;
   });
 } */
+const testData = `<div class="latest_item"><img src="/img/undefined - Imgur (8).jpg" alt=""><div class="info_container"><h2>By : neon studios</h2> <p>price: 37 Nok</p></div><button class="watch_now"><h3>WATCH NOW</h3></button>
+</div>`;
+
+function spinLoadSpin(data, location) {
+  location.style.transform = "rotateY(90deg)";
+  location.innerHTML = data;
+}

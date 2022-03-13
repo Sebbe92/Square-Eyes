@@ -5,7 +5,7 @@ const featuredFilmsUrl =
   "https://portabooth.digital/square-eyes/wp-json/wc/store/products/tags";
 
 //featured film home page
-let numOfFeatured = 0;
+let featuredCount = 0;
 
 //browse
 let listOfFilms = [];

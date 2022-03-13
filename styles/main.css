@@ -40,7 +40,6 @@ textarea {
 }
 h1,
 h2,
-h3,
 label,
 .btn,
 legend {
@@ -53,8 +52,10 @@ legend {
 h1 {
   font-size: 5em;
 }
+h3,
 h4,
 h5 {
+  font-family: "komu-a", sans-serif;
   font-size: 1em;
   font-weight: 200;
   text-transform: capitalize;
@@ -147,6 +148,14 @@ textarea {
 }
 .margin_10 {
   margin: 10px;
+}
+.centered {
+  text-align: center;
+}
+.text_background {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 /*user alert */
